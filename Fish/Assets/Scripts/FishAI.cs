@@ -6,10 +6,12 @@ public class FishAI : MonoBehaviour
 {
     [SerializeField] private float worth;
     [SerializeField] private bool hostile = false;
+    private Rigidbody2D rb;
     private float moveSpeed;
     private Vector3 startScale;
     private Vector3 desiredScale;
     private Vector3 destination;
+    private bool wanderCoRunning;
     //[SerializeField] private 
     private enum FishState
     {
@@ -22,19 +24,27 @@ public class FishAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         state = FishState.WANDERING;
         startScale = transform.localScale;
         desiredScale = transform.localScale;
         destination = transform.localPosition;
+        wanderCoRunning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("");
         switch (state)
         {
             case FishState.WANDERING:
-
+                if (!wanderCoRunning)
+                {
+                    wanderCoRunning = true;
+                    StartCoroutine("WanderCoroutine");
+                    Debug.Log("");
+                }
                 break;
             case FishState.ATTACKING:
 
@@ -46,13 +56,24 @@ public class FishAI : MonoBehaviour
                 break;
 
         }
+        //rb.AddForce(destination);
+    }
+    private void LateUpdate()
+    {
+        Flip();
     }
 
     public IEnumerator WanderCoroutine()
     {
-        //Randomize()
+        Debug.Log("WanderCoroutine");
+        Vector3 position = Randomize(5,10);
+        destination = Vector3.Normalize(Randomize(5,10));
+        //destination
+        rb.AddForce(destination);
         int count = Random.Range(5, 10);
         yield return new WaitForSeconds(count);
+        rb.AddForce(destination);
+        wanderCoRunning =false;
     }
 
     // Flips the enemies scale to face the destination
