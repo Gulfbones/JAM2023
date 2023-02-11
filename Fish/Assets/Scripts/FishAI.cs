@@ -9,6 +9,7 @@ public class FishAI : MonoBehaviour
     [SerializeField] private bool hostile = false;
     //[SerializeField] private AnimationCurve curve;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
     //private Vector3 ;
     [SerializeField] private int normalMoveSpeed = 40;
     [SerializeField] private int fleeMoveSpeed = 20;
@@ -31,12 +32,14 @@ public class FishAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sr = gameObject.transform.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         state = FishState.WANDERING;
         startScale = transform.localScale;
         desiredScale = transform.localScale;
         destination = transform.localPosition;
         wanderCoRunning = false;
+        //desiredScale = startScale;
         rb.drag = 20;
     }
 
@@ -106,7 +109,15 @@ public class FishAI : MonoBehaviour
     */
     private void LateUpdate()
     {
-        Flip();
+        if (rb.velocity.x > 0)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
+
     }
 
     public IEnumerator WanderCoroutine()
@@ -141,33 +152,7 @@ public class FishAI : MonoBehaviour
         rb.AddForce((GameObject.Find("Player").gameObject.transform.position - transform.position).normalized * attackMoveSpeed);
     }
 
-    // Flips the enemies scale to face the destination
-    void Flip()
-    {
-        if (state == FishState.FLEEING)
-        {
-            // Correctly set flip for fleeing specificlly
-            if ((transform.position).x > destination.x && desiredScale.x < 0) // On right side
-            {
-                desiredScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-            }
-            if ((transform.position).x < destination.x && desiredScale.x > 0) // On left side
-            {
-                desiredScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-            }
-        }
-        else
-        {
-            if ((transform.position).x > destination.x && desiredScale.x > 0) // On right side
-            {
-                desiredScale = new Vector3(desiredScale.x * -1, desiredScale.y, desiredScale.z);
-            }
-            if ((transform.position).x < destination.x && desiredScale.x < 0) // On left side
-            {
-                desiredScale = new Vector3(desiredScale.x * -1, desiredScale.y, desiredScale.z);
-            }
-        }
-    }
+    
 
     // Returns a random vector3 based on given minimum distance and maximum
     public Vector3 Randomize(float min, float max)
@@ -212,8 +197,9 @@ public class FishAI : MonoBehaviour
     {
         if (collision.gameObject.name == "Player Range Box")
         {
-            state = FishState.WAITING;
-            rb.drag = 5;
+            state = FishState.FLEEING;
+            StartCoroutine("WaitCoroutine");
+            //rb.drag = 50;
         }
     }
 

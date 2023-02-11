@@ -223,6 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worth: 0
   hostile: 0
+  normalMoveSpeed: 30
+  fleeMoveSpeed: 25
+  attackMoveSpeed: 30
 --- !u!1 &7198863277385971233
 GameObject:
   m_ObjectHideFlags: 0
