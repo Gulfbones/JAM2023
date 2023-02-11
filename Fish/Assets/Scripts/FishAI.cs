@@ -7,6 +7,7 @@ public class FishAI : MonoBehaviour
 {
     [SerializeField] private float worth;
     [SerializeField] private bool hostile = false;
+    [SerializeField] private bool aware = true;
     //[SerializeField] private AnimationCurve curve;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -55,7 +56,7 @@ public class FishAI : MonoBehaviour
                 {
                     wanderCoRunning = true;
                     StartCoroutine("WanderCoroutine");
-                    Debug.Log("ran");
+                    //Debug.Log("ran");
                 }
                 //rb.AddForce(destination);
                 if (Vector3.Distance(gameObject.transform.position, destination) < 4)
@@ -122,11 +123,11 @@ public class FishAI : MonoBehaviour
 
     public IEnumerator WanderCoroutine()
     {
-        Debug.Log("WanderCoroutine");
+        //Debug.Log("WanderCoroutine");
         Vector3 position = Randomize(5,10);
         //destination = Vector3.Normalize(Randomize(5,10));
         destination = (Randomize(5,10));
-        Debug.Log("\nX:" + destination.x + " |     Y:" + destination.y);
+        //Debug.Log("\nX:" + destination.x + " |     Y:" + destination.y);
         rb.drag = 50;
         normalMoveSpeed = Random.Range(20, 40);
         //rb.AddForce((destination - transform.position) * 10 * normalMoveSpeed);
@@ -177,7 +178,8 @@ public class FishAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player Range Box")
+        //if(aware)
+        if (collision.gameObject.name == "Player Range Box" && aware)
         {
             StopAllCoroutines();
             wanderCoRunning = false;    
@@ -195,7 +197,7 @@ public class FishAI : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player Range Box")
+        if (collision.gameObject.name == "Player Range Box" && aware)
         {
             state = FishState.FLEEING;
             StartCoroutine("WaitCoroutine");
