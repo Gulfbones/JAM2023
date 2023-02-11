@@ -10,7 +10,10 @@ public class FishAI : MonoBehaviour
     //[SerializeField] private AnimationCurve curve;
     private Rigidbody2D rb;
     //private Vector3 ;
-    private float moveSpeed;
+    [SerializeField] private int normalMoveSpeed = 40;
+    [SerializeField] private int fleeMoveSpeed = 20;
+    [SerializeField] private int attackMoveSpeed = 30;
+    //private float moveSpeed;
     private Vector3 startScale;
     private Vector3 desiredScale;
     private Vector3 destination;
@@ -21,6 +24,7 @@ public class FishAI : MonoBehaviour
         WANDERING,
         ATTACKING,
         FLEEING,
+        WAITING,
     };
     private FishState state;
 
@@ -33,6 +37,7 @@ public class FishAI : MonoBehaviour
         desiredScale = transform.localScale;
         destination = transform.localPosition;
         wanderCoRunning = false;
+        rb.drag = 20;
     }
 
     // Update is called once per frame
@@ -49,12 +54,26 @@ public class FishAI : MonoBehaviour
                     StartCoroutine("WanderCoroutine");
                     Debug.Log("ran");
                 }
+                //rb.AddForce(destination);
+                if (Vector3.Distance(gameObject.transform.position, destination) < 4)
+                {
+                    rb.drag = 2;
+
+                }
+                else
+                {
+                    rb.AddForce((destination - transform.position).normalized * normalMoveSpeed);
+
+                }
                 break;
             case FishState.ATTACKING:
-
+                Attack();
                 break;
             case FishState.FLEEING:
-
+                Flee();
+                break;
+            case FishState.WAITING:
+                StartCoroutine("WaitCoroutine");
                 break;
             default:
                 break;
@@ -63,17 +82,28 @@ public class FishAI : MonoBehaviour
         //rb.AddForce(destination);
         transform.Find("Debug Square").gameObject.transform.position = destination;
     }
+
+    /*
     void FixedUpdate()
     {
-        if(state == FishState.WANDERING && Vector3.Distance(gameObject.transform.position , destination) < 4 )
+        if(state == FishState.WANDERING )
         {
+            if( Vector3.Distance(gameObject.transform.position , destination) < 4)
+            {
+                rb.drag = 55;
 
+            }
+            else
+            {
+                
+            }
             //rb.drag = gameObject.transform.position / destination;
-            rb.drag = 2;
         }
+        
         //rb.AddForce(destination);
         
     }
+    */
     private void LateUpdate()
     {
         Flip();
@@ -86,23 +116,29 @@ public class FishAI : MonoBehaviour
         //destination = Vector3.Normalize(Randomize(5,10));
         destination = (Randomize(5,10));
         Debug.Log("\nX:" + destination.x + " |     Y:" + destination.y);
-        rb.drag = 0;
-        rb.AddForce((destination - transform.position) * 15);
-        int count = Random.Range(4, 8);
+        rb.drag = 50;
+        normalMoveSpeed = Random.Range(20, 40);
+        //rb.AddForce((destination - transform.position) * 10 * normalMoveSpeed);
+        int count = Random.Range(8, 10);
         yield return new WaitForSeconds(count);
         //Debug.Log("set none");
         destination = gameObject.transform.position*0;
         wanderCoRunning =false;
     }
 
+    public IEnumerator WaitCoroutine()
+    {
+        yield return new WaitForSeconds(2);
+        state = FishState.WANDERING;
+    }
     public void Flee()
     {
-        rb.AddForce(GameObject.Find("Player").gameObject.transform.position * -1);
+        rb.AddForce((transform.position - GameObject.Find("Player").gameObject.transform.position).normalized * fleeMoveSpeed);
     }
 
     public void Attack()
     {
-        rb.AddForce(GameObject.Find("Player").gameObject.transform.position );
+        rb.AddForce((GameObject.Find("Player").gameObject.transform.position - transform.position).normalized * attackMoveSpeed);
     }
 
     // Flips the enemies scale to face the destination
@@ -153,49 +189,22 @@ public class FishAI : MonoBehaviour
         }
         return -1.0f;
     }
-    /*
-    public IEnumerator FleeCoroutine()
-    {
-        fleeCoroutineRunning = true;
-        moveSpeed = fleeMoveSpeed;
-        destination = GameObject.FindGameObjectWithTag("Player").transform.position;
-
-        // Correctly set flip for fleeing specificlly
-        if ((transform.position).x > destination.x && desiredScale.x < 0) // On right side
-        {
-            desiredScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-        }
-        if ((transform.position).x < destination.x && desiredScale.x > 0) // On left side
-        {
-            desiredScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-        }
-        //playerObject.transform.rotation = Quaternion.Lerp(playerObject.transform.rotation, desiredAngle, 10.0f * Time.deltaTime);
-        yield return new WaitForSeconds(5);
-        state = Enemy_State.STALKING;
-        Teleport();
-        fleeCoroutineRunning = false;
-    }
-    */
-
-    public void Eaten()
-    {
-
-        Destroy(gameObject);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player Range Box")
         {
+            StopAllCoroutines();
+            wanderCoRunning = false;    
             if (hostile)
             {
                 state = FishState.ATTACKING;
-                rb.drag = 10;
             }
             else
             {
                 state = FishState.FLEEING;
             }
+            rb.drag = 50;
         }
     }
 
@@ -203,7 +212,7 @@ public class FishAI : MonoBehaviour
     {
         if (collision.gameObject.name == "Player Range Box")
         {
-            state = FishState.WANDERING;
+            state = FishState.WAITING;
             rb.drag = 5;
         }
     }
