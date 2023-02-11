@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class CameraGrow : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    private GameObject player;
     private Transform playerTransform;
 
     private CinemachineVirtualCamera cam;
@@ -15,6 +15,7 @@ public class CameraGrow : MonoBehaviour
 
     private void Start()
     {
+        player = FindObjectOfType<PlayerInput>().gameObject;
         playerTransform = player.GetComponent<Transform>();
         cam = gameObject.GetComponent<CinemachineVirtualCamera>();
         cam.m_Lens.OrthographicSize = orthoBaseSize;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerEat : MonoBehaviour
 {
@@ -21,13 +22,12 @@ public class PlayerEat : MonoBehaviour
     [SerializeField]
     private float amountChanged = 0;
 
-    [Header("For Camera Resizing")]
-    [SerializeField]
     private GameObject cinemaVirtualCamera;
     private CameraGrow camGrowRef;
 
     private void Start()
     {
+        cinemaVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>().gameObject;
         camGrowRef = cinemaVirtualCamera.GetComponent<CameraGrow>();
     }
 
