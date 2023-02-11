@@ -13,7 +13,6 @@ public class GlobalLightModifier : MonoBehaviour
     private float worldYMin = -20;
 
     private Light2D intensityChange;
-    Light globalLight;
 
     // Start is called before the first frame update
     void Start()

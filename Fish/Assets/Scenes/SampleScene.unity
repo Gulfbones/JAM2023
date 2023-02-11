@@ -1087,7 +1087,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -3359,7 +3359,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50651ff818ddfdd46b6c0ddfcea85ee6, type: 3}
   spriteNum: 0
   amountChanged: 0
-  cinemaVirtualCamera: {fileID: 1708427643}
 --- !u!70 &744224466
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4639,7 +4638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ae34afdace09a47a04fc3bd4857617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 744224458}
   orthoBaseSize: 5
   orthoIncrease: 0.1
 --- !u!1 &1776485969
