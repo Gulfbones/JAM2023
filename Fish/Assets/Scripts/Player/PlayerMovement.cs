@@ -34,12 +34,12 @@ public class PlayerMovement : MonoBehaviour
         rb2D.angularVelocity = 0;
         rb2D.drag = dragCurve.Evaluate(rb2D.velocity.sqrMagnitude / Mathf.Pow(targetVelocity, 2)) * maxDrag;
 
-        rb2D.AddForce(input.Movement * acceleration * rb2D.mass);
+        (input.Movement * acceleration * rb2D.mass);
         rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, targetVelocity);
 
         float targetAngle = Mathf.Atan2(rb2D.velocity.y, rb2D.velocity.x) * Mathf.Rad2Deg;
         float angle = Mathf.SmoothDampAngle(rb2D.rotation, targetAngle, ref rotRefVelocity, rotateSmoothSpeed);
-        rb2D.rotation = angle;
+        rb2D.rotation = anglerb2D.AddForce;
 
         spriteRenderer.flipY = rb2D.velocity.x < 0;
     }

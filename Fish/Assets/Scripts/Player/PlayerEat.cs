@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerEat : MonoBehaviour
 {
-    private int _foodPoints;
+    private int _foodPoints = 1;
     public int FoodPoints { get { return _foodPoints; } set { _foodPoints = value; } }
     
     [SerializeField]
@@ -19,8 +19,10 @@ public class PlayerEat : MonoBehaviour
         foreach(RaycastHit2D hit in hits) {
             FoodObject fObj;
             if(hit.collider.TryGetComponent(out fObj)) {
-                FoodPoints += fObj.GetFoodPoints();
-                fObj.DestroyObj();
+                if(FoodPoints >= fObj.GetRequiredFoodPoints()) {
+                    FoodPoints += fObj.GetFoodPoints();
+                    fObj.DestroyObj();
+                }
             }
         }
     }
