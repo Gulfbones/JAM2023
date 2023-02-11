@@ -21,6 +21,16 @@ public class PlayerEat : MonoBehaviour
     [SerializeField]
     private float amountChanged = 0;
 
+    [Header("For Camera Resizing")]
+    [SerializeField]
+    private GameObject cinemaVirtualCamera;
+    private CameraGrow camGrowRef;
+
+    private void Start()
+    {
+        camGrowRef = cinemaVirtualCamera.GetComponent<CameraGrow>();
+    }
+
     void Update()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(mouthTransform.position, eatSize, transform.forward, 0.1f);
@@ -33,6 +43,7 @@ public class PlayerEat : MonoBehaviour
                     FoodPoints += fObj.GetFoodPoints();
                     fObj.DestroyObj();
                     Scale(); // properly scales fish
+                    camGrowRef.ChangeSize(); // scales the camera with the fish, can be edited via CM vCam1
                 }
             }
         }
