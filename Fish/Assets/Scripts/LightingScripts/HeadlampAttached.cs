@@ -27,8 +27,6 @@ public class HeadlampAttached : MonoBehaviour
             globalIntensity = globalLight.intensity;
             gameObject.transform.position = Owner.position; 
             localLight.intensity = 1 - globalIntensity;
-            Debug.Log(globalIntensity);
-            Debug.Log(localLight.intensity);
         }
     }
 }
