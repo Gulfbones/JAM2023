@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ddebb7de37cb7ce47ae72c068f7261a8
+guid: 4986a303c82077b42b4d7b4fd5b77704
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fish16x16(1)_0
+      name: Chomper_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 16
-        height: 16
+        width: 49
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f8fb9fbd6f15cb47b2c16861aeb7415
-      internalID: 16211940
+      spriteID: b55889c9b7e900f4f9c35b4b53c3e26d
+      internalID: -646955334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fish16x16(1)_1
+      name: Chomper_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 53
         y: 0
-        width: 16
-        height: 16
+        width: 49
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c5e4d1510051574593179f51a7a5ae0
-      internalID: 523265151
+      spriteID: 85bc83f70d7252d4b89ef15a3b02473a
+      internalID: 781393172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fish16x16(1)_2
+      name: Chomper_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 102
         y: 0
-        width: 16
-        height: 16
+        width: 49
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97d69b52d5a7c344d9dece0436fe0bde
-      internalID: 1664104866
+      spriteID: 018ee3ae6f7199348b5d471886eaf64f
+      internalID: -662340810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fish16x16(1)_3
+      name: Chomper_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 151
         y: 0
-        width: 16
-        height: 16
+        width: 49
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d91fef30ccf57c439ad21c9074af4be
-      internalID: -1745412289
+      spriteID: c5d7753d410055f49a84d2c41f05a9e2
+      internalID: -974416564
       vertices: []
       indices: 
       edges: []
@@ -211,13 +211,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fish16x16(1)_0: 16211940
-      Fish16x16(1)_2: 1664104866
-      Fish16x16(1)_1: 523265151
-      Fish16x16(1)_3: -1745412289
+      Chomper_2: -662340810
+      Chomper_0: -646955334
+      Chomper_1: 781393172
+      Chomper_3: -974416564
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
