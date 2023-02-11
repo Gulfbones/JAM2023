@@ -20,6 +20,7 @@ public class FishAI : MonoBehaviour
     private Vector3 desiredScale;
     private Vector3 destination;
     private bool wanderCoRunning;
+    public FishSpawnPoint parentSpawnPoint;
     //[SerializeField] private 
     private enum FishState
     {
