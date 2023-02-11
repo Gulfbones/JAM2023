@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LightRayMovement : MonoBehaviour
 {
-    [SerializeField]
     private Transform mainCamera;
+    
     [SerializeField]
     private float worldXMin = -10f;
     [SerializeField]
@@ -22,7 +22,7 @@ public class LightRayMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+                mainCamera = FindObjectOfType<Camera>().gameObject.transform;
     }
 
     // Update is called once per frame
