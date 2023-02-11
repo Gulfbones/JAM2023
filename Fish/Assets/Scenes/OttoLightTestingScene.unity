@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af78cf3e65fc7c4ba68a97ab28700cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 519420032}
   worldXMin: -10
   worldXMax: 10
   lightXOffset: 0
@@ -3475,7 +3474,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ac7d6c3c6a34df04ba1571b36960c421, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3778,7 +3777,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -8420,7 +8419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af78cf3e65fc7c4ba68a97ab28700cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 519420032}
   worldXMin: -10
   worldXMax: 10
   lightXOffset: -1.5
@@ -8694,7 +8692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af78cf3e65fc7c4ba68a97ab28700cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 519420032}
   worldXMin: -10
   worldXMax: 10
   lightXOffset: 0
@@ -9039,7 +9036,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ac7d6c3c6a34df04ba1571b36960c421, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9342,7 +9339,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
