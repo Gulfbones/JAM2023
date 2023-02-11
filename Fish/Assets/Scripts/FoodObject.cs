@@ -5,14 +5,14 @@ using UnityEngine;
 public class FoodObject : MonoBehaviour
 {
     [SerializeField]
-    private int foodWorth = 1;
+    private float foodWorth = 1;
     [SerializeField]
-    private int requiredFoodPoints = 1;
+    private float requiredFoodPoints = 1;
 
     public void DestroyObj() {
         Destroy(gameObject);
     }
 
-    public int GetFoodPoints() { return foodWorth; }
-    public int GetRequiredFoodPoints() { return requiredFoodPoints; }
+    public float GetFoodPoints() { return foodWorth; }
+    public float GetRequiredFoodPoints() { return requiredFoodPoints; }
 }

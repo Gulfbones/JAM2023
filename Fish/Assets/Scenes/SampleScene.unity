@@ -2249,7 +2249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodWorth: 10
+  foodWorth: 1.5
   requiredFoodPoints: 0
 --- !u!1 &519420028
 GameObject:
@@ -2453,7 +2453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodWorth: 1
+  foodWorth: 0.5
   requiredFoodPoints: 0
 --- !u!114 &579000032
 MonoBehaviour:
@@ -2479,7 +2479,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579000029}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2865,7 +2865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouthTransform: {fileID: 1628970315}
-  eatSize: 0.35
+  eatSize: 1
 --- !u!70 &744224466
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3096,7 +3096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodWorth: 1
+  foodWorth: 0.5
   requiredFoodPoints: 0
 --- !u!1 &1376595239
 GameObject:
@@ -3412,7 +3412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodWorth: 1
+  foodWorth: 0.5
   requiredFoodPoints: 0
 --- !u!114 &1776485972
 MonoBehaviour:
@@ -3438,7 +3438,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776485969}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3533,7 +3533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198863276029957771, guid: dd1552a1eac43fe47a9b1b04a207ac7d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7198863276029957772, guid: dd1552a1eac43fe47a9b1b04a207ac7d, type: 3}
       propertyPath: m_FlipX
@@ -3543,18 +3543,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f55240e4011ef7d40a4bdf2f5e3dac33, type: 3}
-    - target: {fileID: 7198863276029957774, guid: dd1552a1eac43fe47a9b1b04a207ac7d, type: 3}
-      propertyPath: hostile
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198863276029957774, guid: dd1552a1eac43fe47a9b1b04a207ac7d, type: 3}
-      propertyPath: fleeMoveSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7198863276029957774, guid: dd1552a1eac43fe47a9b1b04a207ac7d, type: 3}
-      propertyPath: normalMoveSpeed
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 7198863276029957775, guid: dd1552a1eac43fe47a9b1b04a207ac7d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

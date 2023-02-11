@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerEat : MonoBehaviour
 {
-    private int _foodPoints = 1;
-    public int FoodPoints { get { return _foodPoints; } set { _foodPoints = value; } }
+    private float _foodPoints = 5.0f;
+    public float FoodPoints { get { return _foodPoints; } set { _foodPoints = value; } }
     
     [SerializeField]
     private Transform mouthTransform;
@@ -22,9 +22,15 @@ public class PlayerEat : MonoBehaviour
                 if(FoodPoints >= fObj.GetRequiredFoodPoints()) {
                     FoodPoints += fObj.GetFoodPoints();
                     fObj.DestroyObj();
+                    Scale(); // properly scales fish
                 }
             }
         }
+    }
+
+    private void Scale()
+    {
+        transform.localScale = new Vector2(1 * FoodPoints / 5, 1 * FoodPoints / 5);
     }
 
     private void OnDrawGizmosSelected() {
