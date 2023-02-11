@@ -6,8 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    private float TargetVelocity { get { return input.Dashing ? dashingVelocity : normalVelocity; } }
+
     [SerializeField]
-    private float targetVelocity = 4.0f;
+    private float normalVelocity = 4.0f;
+    [SerializeField]
+    private float dashingVelocity = 6.50f;
     [SerializeField]
     private float acceleration = 2.50f;
     [SerializeField]
@@ -32,10 +36,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update() {
         rb2D.rotation = rb2D.rotation % 360f;
         rb2D.angularVelocity = 0;
-        rb2D.drag = dragCurve.Evaluate(rb2D.velocity.sqrMagnitude / Mathf.Pow(targetVelocity, 2)) * maxDrag;
+        rb2D.drag = dragCurve.Evaluate(rb2D.velocity.sqrMagnitude / Mathf.Pow(TargetVelocity, 2)) * maxDrag;
 
         rb2D.AddForce(input.Movement * acceleration * rb2D.mass);
-        rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, targetVelocity);
+        rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, TargetVelocity);
 
         float targetAngle = Mathf.Atan2(rb2D.velocity.y, rb2D.velocity.x) * Mathf.Rad2Deg;
         float angle = Mathf.SmoothDampAngle(rb2D.rotation, targetAngle, ref rotRefVelocity, rotateSmoothSpeed);
