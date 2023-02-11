@@ -85,7 +85,7 @@ public class FishAI : MonoBehaviour
 
         }
         //rb.AddForce(destination);
-        transform.Find("Debug Square").gameObject.transform.position = destination;
+        //transform.Find("Debug Square").gameObject.transform.position = destination;
     }
 
     /*
