@@ -26,7 +26,7 @@ public class LightRayMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Vector3 camPosition = mainCamera.position;
         float camXPosition = camPosition.x;
