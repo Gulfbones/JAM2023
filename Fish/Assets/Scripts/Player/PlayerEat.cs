@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using UnityEngine.Animations;
 using UnityEngine.Windows;
 using TMPro;
+using UnityEngine.SceneManagement;
 //using UnityEditor.Animations;
 
 public class PlayerEat : MonoBehaviour
@@ -42,8 +43,10 @@ public class PlayerEat : MonoBehaviour
 
     private bool size2;
     private bool size3;
+    private bool size4;
+    
     private bool damagedRecently;
-    private float newMinSize;
+    private float newMinFood;
 
 
     private void Start()
@@ -58,8 +61,9 @@ public class PlayerEat : MonoBehaviour
         Debug.Log("Size"+ newSprite.Length);
         size2 = false;
         size3 = false;
+        size4 = false;
         damagedRecently = false;
-        newMinSize = 6.0f;
+        newMinFood = 6.0f;
     }
 
     void Update()
@@ -67,7 +71,7 @@ public class PlayerEat : MonoBehaviour
         RaycastHit2D[] hits = Physics2D.CircleCastAll(mouthTransform.position, eatSize, transform.forward, 0.1f);
         if (pInput.ShrinkFish)
         {
-            if ((FoodPoints >= newMinSize))
+            if ((FoodPoints >= newMinFood))
             {
                 FoodPoints -= 0.1f;
                 //FoodPoints -= FoodPoints * 0.05f;
@@ -86,7 +90,10 @@ public class PlayerEat : MonoBehaviour
                     {
                         lastAteFish.text = gameObject.ToString();
                     }
-
+                    if(fObj.tag == "Final")
+                    {
+                        SceneManager.LoadScene("CreditsScene"); //LoadSceneMode.Additive);
+                    }
                     if (fObj.lightAngler) { gameObject.GetComponentInChildren<HeadlampAttached>().ActivateLight(); }
                     fObj.DestroyObj();
                     Scale(); // properly scales fish
@@ -100,12 +107,21 @@ public class PlayerEat : MonoBehaviour
         transform.localScale = new Vector2(startingSize * FoodPoints / startingFood, startingSize * FoodPoints / startingFood);
         //transform.Find("sprite").GetComponent<CheckSizeChange>().SizeUp(lastAteValue);
         //amountChanged += lastAteValue;
-        if (transform.localScale.x > 4.0f && !size3)
+        if (transform.localScale.x > 10.0f && !size4)
+        {
+            //spriteNum = 2;
+            size4 = true;
+            eatSize = 5.5f;
+            newMinFood = 51.0f;
+            StartCoroutine(ChangeSpriteCoroutine(1));
+
+        }
+        if (transform.localScale.x > 6.0f && !size3)
         {
             //spriteNum = 2;
             size3 = true;
             eatSize = 1.5f;
-            newMinSize = 21f;
+            newMinFood = 31.0f;
             StartCoroutine(ChangeSpriteCoroutine(1));
             
         }
@@ -113,7 +129,7 @@ public class PlayerEat : MonoBehaviour
             //spriteNum = 1;
             size2 = true;
             eatSize = 0.8f;
-            newMinSize = 11f;
+            newMinFood = 11f;
             StartCoroutine(ChangeSpriteCoroutine(0));
             
         }
@@ -142,7 +158,7 @@ public class PlayerEat : MonoBehaviour
 
     public IEnumerator DamageCoroutine()
     {
-        if (!((FoodPoints - FoodPoints * 0.05f) < newMinSize))
+        if (!((FoodPoints - FoodPoints * 0.05f) < newMinFood))
         {
             FoodPoints -= FoodPoints * 0.05f;
             Scale();
@@ -158,10 +174,17 @@ public class PlayerEat : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Hostile" && !damagedRecently)
+        if(collision.gameObject.tag == "Hostile" && !damagedRecently && FoodPoints < 70)
         {
             damagedRecently = true;
             StartCoroutine(DamageCoroutine());
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Foliage" && FoodPoints > 75)
+        {
+            GameObject.Destroy(collision.gameObject);
         }
     }
 }

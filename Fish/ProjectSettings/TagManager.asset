@@ -7,6 +7,8 @@ TagManager:
   - Food
   - Ground
   - Hostile
+  - Foliage
+  - Final
   layers:
   - Default
   - TransparentFX

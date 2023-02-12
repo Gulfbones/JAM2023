@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private float maxDrag = 1.75f;
 
     float rotRefVelocity;
+    bool size1 = false;
+    bool size2 = false;
 
     PlayerInput input;
     Rigidbody2D rb2D;
@@ -37,6 +39,24 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Update() {
+        if (!size1 && transform.localScale.x > 5)
+        {
+            size1 = true;
+            normalVelocity = 6;
+            dashingVelocity = 8;
+            acceleration = 5.5f;
+            dashAcceleration = 10.0f;
+        }
+        
+        if (!size2 && transform.localScale.x > 20)
+        {
+            size2 = true;
+            normalVelocity = 10;
+            dashingVelocity = 12;
+            acceleration = 5.5f;
+            dashAcceleration = 10.0f;
+        }
+
         rb2D.rotation = rb2D.rotation % 360f;
         rb2D.angularVelocity = 0;
         rb2D.drag = dragCurve.Evaluate(rb2D.velocity.sqrMagnitude / Mathf.Pow(TargetVelocity, 2)) * maxDrag;

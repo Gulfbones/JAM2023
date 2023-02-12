@@ -35,6 +35,6 @@ public class CameraGrow : MonoBehaviour
     {
         //orthoChange;
         //cam.m_Lens.OrthographicSize = 3 * orthoChange - (2.0f*(orthoChange - 1.0f));
-        desiredScale = 3 * orthoChange - (2.0f*(orthoChange - 1.0f));
+        desiredScale = 3 * orthoChange - (1.5f*(orthoChange - 1.0f));
     }
 }

@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightAngler: 1
   foodWorth: 1.2
   requiredFoodPoints: 20
   isFish: 1
