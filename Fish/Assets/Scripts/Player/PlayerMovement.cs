@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float normalVelocity = 4.0f;
     [SerializeField]
-    private float dashingVelocity = 6.50f;
+    private float dashingVelocity = 8.0f;
     [SerializeField]
     private float acceleration = 2.50f;
     [SerializeField]

@@ -11591,7 +11591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2901199071536889758, guid: 26b3a287249c51f419685df88c7f9962, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26b3a287249c51f419685df88c7f9962, type: 3}
@@ -33462,7 +33462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5888298846118963090, guid: e47f00ff7365a3f4e9c106a15d0c5701, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5888298846118963093, guid: e47f00ff7365a3f4e9c106a15d0c5701, type: 3}
       propertyPath: foodWorth
