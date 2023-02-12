@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6535287714568754378}
   m_Layer: 8
   m_Name: Moby
-  m_TagString: Food
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,5 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodWorth: 10
-  requiredFoodPoints: 30
+  requiredFoodPoints: 60
   isFish: 1

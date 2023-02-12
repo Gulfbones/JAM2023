@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1808376574}
   m_Layer: 8
   m_Name: Anglerfish Fish
-  m_TagString: Food
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodWorth: 1.2
-  requiredFoodPoints: 10
+  requiredFoodPoints: 20
   isFish: 1
 --- !u!114 &1808376574
 MonoBehaviour:

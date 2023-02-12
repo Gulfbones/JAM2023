@@ -10,7 +10,7 @@ public class CameraGrow : MonoBehaviour
 
     private CinemachineVirtualCamera cam;
 
-    [SerializeField] private float orthoBaseSize = 5.0f;
+    [SerializeField] private float orthoBaseSize = 3.0f;
     [SerializeField] private float orthoIncrease = 0.1f; 
 
     private void Start()
@@ -27,8 +27,9 @@ public class CameraGrow : MonoBehaviour
         //Debug.Log(playerTransform.localScale);
     }
 
-    public void ChangeSize()
+    public void ChangeSize(float orthoChange)
     {
-        cam.m_Lens.OrthographicSize += orthoIncrease;
+        //orthoChange;
+        cam.m_Lens.OrthographicSize = 3 * orthoChange - (2.0f*(orthoChange - 1.0f));
     }
 }

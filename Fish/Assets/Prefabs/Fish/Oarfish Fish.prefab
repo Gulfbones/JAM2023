@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3697812668430798312}
   m_Layer: 8
   m_Name: Oarfish Fish
-  m_TagString: Food
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,5 +159,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodWorth: 4
-  requiredFoodPoints: 25
+  requiredFoodPoints: 35
   isFish: 1

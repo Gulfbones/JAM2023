@@ -23,6 +23,7 @@ public class PlayerEat : MonoBehaviour
     [SerializeField] 
     private int spriteNum = 0;
     private float startingSize;
+    private float startingFood;
     [SerializeField]
     private float amountChanged = 0;
     private Text lastAteFish;
@@ -33,10 +34,13 @@ public class PlayerEat : MonoBehaviour
 
     private bool size2;
     private bool size3;
+    private bool damagedRecently;
+    private float newMinSize;
 
 
     private void Start()
     {
+        startingFood = FoodPoints;
         cinemaVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>().gameObject;
         camGrowRef = cinemaVirtualCamera.GetComponent<CameraGrow>();
         startingSize = transform.localScale.x;
@@ -45,6 +49,8 @@ public class PlayerEat : MonoBehaviour
         Debug.Log("Size"+ newSprite.Length);
         size2 = false;
         size3 = false;
+        damagedRecently = false;
+        newMinSize = 5.0f;
     }
 
     void Update()
@@ -64,27 +70,34 @@ public class PlayerEat : MonoBehaviour
                     }
                     fObj.DestroyObj();
                     Scale(); // properly scales fish
-                    camGrowRef.ChangeSize(); // scales the camera with the fish, can be edited via CM vCam1
+                    //var changing = (FoodPoints / startingFood);
                 }
             }
         }
     }
 
     private void Scale() { // properly scales fish
-        transform.localScale = new Vector2(startingSize * FoodPoints / 5, startingSize * FoodPoints / 5);
-        transform.Find("sprite").GetComponent<CheckSizeChange>().SizeUp(lastAteValue);
-        amountChanged += lastAteValue;
+        transform.localScale = new Vector2(startingSize * FoodPoints / startingFood, startingSize * FoodPoints / startingFood);
+        //transform.Find("sprite").GetComponent<CheckSizeChange>().SizeUp(lastAteValue);
+        //amountChanged += lastAteValue;
         if (transform.localScale.x > 4.0f && !size3)
         {
             //spriteNum = 2;
+            size3 = true;
+            eatSize = 1.5f;
+            newMinSize = 40f;
             StartCoroutine(ChangeSpriteCoroutine(1));
             
         }
         if (transform.localScale.x > 2.0f && !size2) {
             //spriteNum = 1;
+            size2 = true;
+            eatSize = 0.8f;
+            newMinSize = 20f;
             StartCoroutine(ChangeSpriteCoroutine(0));
             
         }
+        camGrowRef.ChangeSize(transform.localScale.x * 2); // scales the camera with the fish, can be edited via CM vCam1
     }
 
     public IEnumerator ChompCoroutine()
@@ -97,14 +110,36 @@ public class PlayerEat : MonoBehaviour
     public IEnumerator ChangeSpriteCoroutine(int spriteNum)
     {
         //var emission = GetComponent<ParticleSystem>().emission; // Stores the module in a local variable
-        //emission.enabled = true; // Applies the new value directly to the Particle System
-        yield return new WaitForSeconds(0.1f);
+        var emission = GetComponent<ParticleSystem>(); // Stores the module in a local variable
+        emission.Play(); // Applies the new value directly to the Particle System
+        yield return new WaitForSeconds(1.0f);
         gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[spriteNum];
         gameObject.GetComponent<Animator>().runtimeAnimatorController = newController[spriteNum];
         //emission.enabled = false;
     }
 
+    public IEnumerator DamageCoroutine()
+    {
+        if (!((FoodPoints - FoodPoints * 0.05f) < newMinSize))
+        {
+            FoodPoints -= FoodPoints * 0.05f;
+            Scale();
+        }
+        
+        yield return new WaitForSeconds(2.0f);
+        damagedRecently = false;
+    }
+
     private void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(mouthTransform.position, eatSize);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Hostile" && !damagedRecently)
+        {
+            damagedRecently = true;
+            StartCoroutine(DamageCoroutine());
+        }
     }
 }

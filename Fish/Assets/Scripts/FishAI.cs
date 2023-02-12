@@ -197,6 +197,10 @@ public class FishAI : MonoBehaviour
             StopAllCoroutines();
             state = FishState.HOME;
         }
+        if(collision.gameObject.tag == "Player")
+        {
+            state = FishState.FLEEING;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

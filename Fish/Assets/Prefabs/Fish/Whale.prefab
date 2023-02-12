@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodWorth: 6
-  requiredFoodPoints: 29
+  foodWorth: 7
+  requiredFoodPoints: 50
   isFish: 1
 --- !u!114 &701377054
 MonoBehaviour:

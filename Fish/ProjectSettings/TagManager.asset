@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - Ground
+  - Hostile
   layers:
   - Default
   - TransparentFX
