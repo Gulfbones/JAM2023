@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
+using UnityEditor.Animations;
 
 public class PlayerEat : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerEat : MonoBehaviour
     private float eatSize = 0.35f;
     [SerializeField] 
     private Sprite[] newSprite;
+    [SerializeField]
+    private AnimatorController[] newController;
     [SerializeField] 
     private int spriteNum = 0;
     private float startingSize;
@@ -35,6 +38,7 @@ public class PlayerEat : MonoBehaviour
         startingSize = transform.localScale.x;
         chomping = transform.Find("Chomper").gameObject;
         chomping.SetActive(false);
+        Debug.Log("Size"+ newSprite.Length);
     }
 
     void Update()
@@ -64,11 +68,17 @@ public class PlayerEat : MonoBehaviour
         transform.localScale = new Vector2(startingSize * FoodPoints / 5, startingSize * FoodPoints / 5);
         transform.Find("sprite").GetComponent<CheckSizeChange>().SizeUp(lastAteValue);
         amountChanged += lastAteValue;
-        if (amountChanged >= 5 && spriteNum <= newSprite.Length) {
-            amountChanged = amountChanged - 5;
-            spriteNum++;
+        if (transform.localScale.x > 4.0f)
+        {
+            //spriteNum = 2;
+            gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[1];
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = newController[1];
         }
-        gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[spriteNum];
+        if (transform.localScale.x > 2.0f) {
+            //spriteNum = 1;
+            gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[0];
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = newController[0];
+        }
     }
 
     public IEnumerator ChompCoroutine()
