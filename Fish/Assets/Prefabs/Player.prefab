@@ -412,6 +412,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 875ec7a1416411546ba0ab564654bca8, type: 2}
   spriteNum: 0
   amountChanged: 0
+  sizeText: {fileID: 0}
 --- !u!50 &7730103187386899126
 Rigidbody2D:
   serializedVersion: 4
