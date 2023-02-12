@@ -31,7 +31,7 @@ public class LightRayMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){
+    void LateUpdate(){
         float sunIntensity = gameObject.GetComponent<Light2D>().intensity;
         Vector3 camPosition = mainCamera.position;
         float camXPosition = camPosition.x;

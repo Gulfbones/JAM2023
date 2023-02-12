@@ -25,6 +25,7 @@ public class HeadlampAttached : MonoBehaviour
             globalLight = FindObjectOfType<GlobalLightModifier>().gameObject.GetComponent<Light2D>();
             globalIntensity = globalLight.intensity;
             localLight.intensity = 1 - globalIntensity;
+            localLight.pointLightOuterRadius = 5 * gameObject.GetComponentInParent<Transform>().lossyScale.x; // grows light radius
         }
     }
 }
