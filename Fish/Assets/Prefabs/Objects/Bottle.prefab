@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1742612441, guid: 38ba9955c7a48f64086914b1eda74eb7, type: 3}
+  m_Sprite: {fileID: -485428707, guid: 9e233ee2733e1cc4685e04120f23df37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
