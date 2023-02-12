@@ -30,6 +30,6 @@ public class CameraGrow : MonoBehaviour
     public void ChangeSize(float orthoChange)
     {
         //orthoChange;
-        cam.m_Lens.OrthographicSize = 3 * orthoChange - (2.7f*(orthoChange - 1.0f));
+        cam.m_Lens.OrthographicSize = 3 * orthoChange - (2.0f*(orthoChange - 1.0f));
     }
 }
