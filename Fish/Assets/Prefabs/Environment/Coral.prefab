@@ -96,6 +96,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hydrothermal PS
       objectReference: {fileID: 0}
+    - target: {fileID: 1813305584134457429, guid: f5d8173858c1d8a4a836a8666e181fd4, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813305584134457429, guid: f5d8173858c1d8a4a836a8666e181fd4, type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813305584134457429, guid: f5d8173858c1d8a4a836a8666e181fd4, type: 3}
+      propertyPath: VelocityModule.inWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813305584134457429, guid: f5d8173858c1d8a4a836a8666e181fd4, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1813305584134457431, guid: f5d8173858c1d8a4a836a8666e181fd4, type: 3}
       propertyPath: m_RootOrder
       value: 0

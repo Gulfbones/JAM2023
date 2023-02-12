@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3654994253872216801}
   - component: {fileID: 3654994253872216800}
+  - component: {fileID: 1784202383344977188}
   m_Layer: 0
   m_Name: Kelp
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 449483393
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 2045152764, guid: 4e02662b6c3847f4eb4c717af0199838, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -85,6 +86,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1784202383344977188
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654994253872216815}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d913b6fc8a78928428c8262bc2c40e2d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3654994254182045160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,6 +113,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3654994253872216801}
     m_Modifications:
+    - target: {fileID: 14644518194944358, guid: 8a14486f8ed9a22478200001277e5e2c, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14644518194944358, guid: 8a14486f8ed9a22478200001277e5e2c, type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 14644518194944358, guid: 8a14486f8ed9a22478200001277e5e2c, type: 3}
+      propertyPath: VelocityModule.inWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14644518194944358, guid: 8a14486f8ed9a22478200001277e5e2c, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 14644518194944376, guid: 8a14486f8ed9a22478200001277e5e2c, type: 3}
       propertyPath: m_RootOrder
       value: 0
