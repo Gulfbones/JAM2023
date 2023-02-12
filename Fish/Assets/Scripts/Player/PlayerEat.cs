@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
+using UnityEngine.Animations;
 using UnityEngine.Windows;
 using TMPro;
+//using UnityEditor.Animations;
 
 public class PlayerEat : MonoBehaviour
 {
@@ -21,7 +23,7 @@ public class PlayerEat : MonoBehaviour
     [SerializeField] 
     private Sprite[] newSprite;
     [SerializeField]
-    private AnimatorController[] newController;
+    private RuntimeAnimatorController[] newController;
     [SerializeField] 
     private int spriteNum = 0;
     private float startingSize;
