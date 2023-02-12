@@ -28,8 +28,9 @@ public class FishAI : MonoBehaviour
         ATTACKING,
         FLEEING,
         WAITING,
+        HOME,
     };
-    private FishState state;
+    [SerializeField] private FishState state;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +80,9 @@ public class FishAI : MonoBehaviour
                 break;
             case FishState.WAITING:
                 StartCoroutine("WaitCoroutine");
+                break;
+            case FishState.HOME:
+                Home();
                 break;
             default:
                 break;
@@ -154,7 +158,15 @@ public class FishAI : MonoBehaviour
         rb.AddForce((GameObject.Find("Player").gameObject.transform.position - transform.position).normalized * attackMoveSpeed);
     }
 
-    
+    public void Home()
+    {
+        destination = gameObject.transform.parent.position;
+        rb.AddForce((destination - transform.position).normalized * normalMoveSpeed);
+        state = FishState.WANDERING;
+        //yield return new WaitForSeconds(2);
+        //state = FishState.WANDERING;
+    }
+
 
     // Returns a random vector3 based on given minimum distance and maximum
     public Vector3 Randomize(float min, float max)
@@ -177,6 +189,14 @@ public class FishAI : MonoBehaviour
         return -1.0f;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            StopAllCoroutines();
+            state = FishState.HOME;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if(aware)
