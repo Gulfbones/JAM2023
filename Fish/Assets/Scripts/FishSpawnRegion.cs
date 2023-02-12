@@ -7,6 +7,8 @@ public class FishSpawnRegion : MonoBehaviour
 {
     [SerializeField]
     private Transform spawnPointsHolder;
+    [SerializeField]
+    private Transform propsHolder;
 
     private bool isPlayerInside;
 
@@ -17,6 +19,7 @@ public class FishSpawnRegion : MonoBehaviour
             for(int i = 0; i < spawnPointsHolder.childCount; i++) {
                 spawnPointsHolder.GetChild(i).GetComponent<FishSpawnPoint>().doFishSpawning = true;
             }
+            propsHolder.gameObject.SetActive(true);
         }
     }
 
@@ -25,8 +28,9 @@ public class FishSpawnRegion : MonoBehaviour
             isPlayerInside = false;
 
             for (int i = 0; i < spawnPointsHolder.childCount; i++) {
-                spawnPointsHolder.GetChild(i).GetComponent<FishSpawnPoint>().doFishSpawning = true;
+                spawnPointsHolder.GetChild(i).GetComponent<FishSpawnPoint>().doFishSpawning = false;
             }
+            propsHolder.gameObject.SetActive(false);
         }
     }
 
