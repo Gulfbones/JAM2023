@@ -9,7 +9,6 @@ public class ProjectileShooter : MonoBehaviour
 
     [Header("Projectile Info")]
     [SerializeField] private GameObject projectile;
-    [SerializeField] float projectileSpeed = 1;
 
     [Header("For debug")]
     [SerializeField] private bool fireProjectiles;
@@ -26,25 +25,6 @@ public class ProjectileShooter : MonoBehaviour
         playerTransform = player.GetComponent<Transform>();
         StartCoroutine(TestFire());
     }
-
-    /*private void Update()
-    {
-        if(fireProjectiles)
-        {
-            if (!isCoroutineRunning)
-            {
-                StartCoroutine(TestFire());
-                isCoroutineRunning = true;
-            }
-        } else if(!fireProjectiles)
-        {
-            if (isCoroutineRunning)
-            {
-                StopCoroutine(TestFire());
-                isCoroutineRunning = false;
-            }
-        }
-    }*/
 
     private void FireProjectile()
     {

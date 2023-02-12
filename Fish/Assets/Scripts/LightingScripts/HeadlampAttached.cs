@@ -6,7 +6,7 @@ using UnityEngine;
 public class HeadlampAttached : MonoBehaviour
 {
     [SerializeField]
-    private bool isOn = true;
+    private bool isOn;
     // Start is called before the first frame update
     private Light2D localLight;
     private Light2D globalLight;
@@ -14,6 +14,7 @@ public class HeadlampAttached : MonoBehaviour
     void Start(){
         
         localLight = gameObject.GetComponent<Light2D>();
+        isOn = false;
         //owner needs to be connected to the player transform
         // globalLight = FindObjectOfType<GlobalLightModifier>().gameObject.GetComponent<Light2D>();
         // globalIntensity = globalLight.intensity;
@@ -27,5 +28,10 @@ public class HeadlampAttached : MonoBehaviour
             localLight.intensity = 1 - globalIntensity;
             localLight.pointLightOuterRadius = 5 * gameObject.GetComponentInParent<Transform>().lossyScale.x; // grows light radius
         }
+    }
+
+    public void ActivateLight()
+    {
+        isOn = true;
     }
 }

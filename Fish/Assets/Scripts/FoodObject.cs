@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FoodObject : MonoBehaviour
 {
+    public bool lightAngler = false;
     [SerializeField]
     private float foodWorth = 1;
     [SerializeField]

@@ -81,6 +81,8 @@ public class PlayerEat : MonoBehaviour
                     {
                         lastAteFish.text = gameObject.ToString();
                     }
+
+                    if (fObj.lightAngler) { gameObject.GetComponentInChildren<HeadlampAttached>().ActivateLight(); }
                     fObj.DestroyObj();
                     Scale(); // properly scales fish
                     //var changing = (FoodPoints / startingFood);
