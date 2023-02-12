@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 145520195}
   m_Layer: 0
   m_Name: Closed Sprite Shape
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2256,7 +2256,7 @@ SpriteRenderer:
   m_SortingLayerID: 449483393
   m_SortingLayer: -1
   m_SortingOrder: -100
-  m_Sprite: {fileID: -1646170369, guid: 0b05dde7a8209744d8cd7cb53dda4218, type: 3}
+  m_Sprite: {fileID: 375854617, guid: b5b50bdba5efc624a8b4f48e046d89dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3239,7 +3239,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  Owner: {fileID: 7198863275716607465}
 --- !u!114 &1111576254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4339,6 +4338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
+--- !u!4 &235978595719782030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+  m_PrefabInstance: {fileID: 4240343053062467314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &849274950116252061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4393,26 +4397,6 @@ PrefabInstance:
     - target: {fileID: 7507143319564010714, guid: aa06ace772223994e8ed91197c24312c, type: 3}
       propertyPath: m_Name
       value: Med Green Fish
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0530916
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Size.y
-      value: 0.5752727
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.01896107
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.030337995
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Direction
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa06ace772223994e8ed91197c24312c, type: 3}
@@ -4701,6 +4685,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0373e1942dce08f4db2254c777b3dad6, type: 3}
+--- !u!1001 &4240343053062467314
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7198863275716607465}
+    m_Modifications:
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117884, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152007428624117887, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
+      propertyPath: m_Name
+      value: Squid Fish
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 507a1f824ab98fd40b765e8b7b234540, type: 3}
 --- !u!4 &7198863275716607465
 Transform:
   m_ObjectHideFlags: 0
@@ -4709,7 +4750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7198863275716607467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.83, y: 7.42, z: 0}
+  m_LocalPosition: {x: 6.9, y: 10.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4719,6 +4760,7 @@ Transform:
   - {fileID: 1077464124}
   - {fileID: 1694794256}
   - {fileID: 1768079361}
+  - {fileID: 235978595719782030}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
