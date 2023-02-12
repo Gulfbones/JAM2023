@@ -8,6 +8,7 @@ public class FishAI : MonoBehaviour
     [SerializeField] private float worth;
     [SerializeField] private bool hostile = false;
     [SerializeField] private bool aware = true;
+    [SerializeField] private int range = 15;
     //[SerializeField] private AnimationCurve curve;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -129,9 +130,9 @@ public class FishAI : MonoBehaviour
     public IEnumerator WanderCoroutine()
     {
         //Debug.Log("WanderCoroutine");
-        Vector3 position = Randomize(5,10);
+        //Vector3 position = Randomize(5,10);
         //destination = Vector3.Normalize(Randomize(5,10));
-        destination = (Randomize(5,10));
+        destination = (Randomize(1,range));
         //Debug.Log("\nX:" + destination.x + " |     Y:" + destination.y);
         rb.drag = 50;
         normalMoveSpeed = Random.Range(20, 40);

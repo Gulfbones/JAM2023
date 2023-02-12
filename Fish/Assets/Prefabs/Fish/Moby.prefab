@@ -157,6 +157,7 @@ MonoBehaviour:
   worth: 0
   hostile: 0
   aware: 1
+  range: 15
   normalMoveSpeed: 30
   fleeMoveSpeed: 25
   attackMoveSpeed: 30
