@@ -158,4 +158,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodWorth: 0.8
-  requiredFoodPoints: 7
+  requiredFoodPoints: 10
