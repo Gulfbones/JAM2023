@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodWorth: 0.2
   requiredFoodPoints: 5
+  isFish: 0
 --- !u!58 &5888298846118963092
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -130,7 +131,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 50
+  m_LinearDrag: 30
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}

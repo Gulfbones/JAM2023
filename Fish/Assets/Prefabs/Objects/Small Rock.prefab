@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodWorth: 0.01
+  foodWorth: 0
   requiredFoodPoints: 1
+  isFish: 0
 --- !u!70 &6439641730573464788
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -56,7 +56,11 @@ public class PlayerEat : MonoBehaviour
     void Update()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(mouthTransform.position, eatSize, transform.forward, 0.1f);
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            FoodPoints -= 0.1f;
+            Scale();
+        }
         foreach(RaycastHit2D hit in hits) {
             FoodObject fObj;
             if(hit.collider.TryGetComponent(out fObj)) {

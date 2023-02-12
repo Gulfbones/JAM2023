@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodWorth: 0.1
   requiredFoodPoints: 5
+  isFish: 0
 --- !u!50 &2901199071536889759
 Rigidbody2D:
   serializedVersion: 4
@@ -114,7 +115,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 50
+  m_LinearDrag: 30
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}

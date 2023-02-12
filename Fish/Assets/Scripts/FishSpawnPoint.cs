@@ -59,8 +59,9 @@ public class FishSpawnPoint : MonoBehaviour {
 
             GameObject spawnedFish = Instantiate(fishToSpawn, worldPos, Quaternion.Euler(0, 0, 0), gameObject.transform);
             fishCountGlobal += 1;
-
-            spawnedFish.GetComponent<FishAI>().parentSpawnPoint = this;
+            if(spawnedFish.GetComponent<FishAI>() != null) {
+                spawnedFish.GetComponent<FishAI>().parentSpawnPoint = this;
+            }
         }
         StartCoroutine(SpawnFish());
     }
