@@ -160,3 +160,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodWorth: 3
   requiredFoodPoints: 20
+  isFish: 1

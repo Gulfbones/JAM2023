@@ -8,9 +8,13 @@ public class FoodObject : MonoBehaviour
     private float foodWorth = 1;
     [SerializeField]
     private float requiredFoodPoints = 1;
+    [SerializeField]
+    private bool isFish;
 
     public void DestroyObj() {
         Destroy(gameObject);
+        if (isFish)
+            FishSpawnPoint.fishCountGlobal -= 1;
     }
 
     public float GetFoodPoints() { return foodWorth; }
