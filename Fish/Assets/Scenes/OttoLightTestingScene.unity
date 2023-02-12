@@ -2974,6 +2974,7 @@ MonoBehaviour:
   fleeMoveSpeed: 25
   attackMoveSpeed: 30
   parentSpawnPoint: {fileID: 0}
+  state: 0
 --- !u!70 &579000033
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -14554,6 +14555,7 @@ MonoBehaviour:
   fleeMoveSpeed: 25
   attackMoveSpeed: 30
   parentSpawnPoint: {fileID: 0}
+  state: 0
 --- !u!70 &1776485973
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
