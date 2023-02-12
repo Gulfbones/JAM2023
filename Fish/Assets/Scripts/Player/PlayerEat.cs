@@ -31,6 +31,10 @@ public class PlayerEat : MonoBehaviour
     private CameraGrow camGrowRef;
     private GameObject chomping;
 
+    private bool size2;
+    private bool size3;
+
+
     private void Start()
     {
         cinemaVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>().gameObject;
@@ -39,6 +43,8 @@ public class PlayerEat : MonoBehaviour
         chomping = transform.Find("Chomper").gameObject;
         chomping.SetActive(false);
         Debug.Log("Size"+ newSprite.Length);
+        size2 = false;
+        size3 = false;
     }
 
     void Update()
@@ -51,7 +57,7 @@ public class PlayerEat : MonoBehaviour
                 if(FoodPoints >= fObj.GetRequiredFoodPoints()) {
                     lastAteValue = fObj.GetFoodPoints();
                     FoodPoints += fObj.GetFoodPoints();
-                    StartCoroutine("ChompCoroutine");
+                    StartCoroutine(ChompCoroutine());
                     if (lastAteFish != null)
                     {
                         lastAteFish.text = gameObject.ToString();
@@ -68,16 +74,16 @@ public class PlayerEat : MonoBehaviour
         transform.localScale = new Vector2(startingSize * FoodPoints / 5, startingSize * FoodPoints / 5);
         transform.Find("sprite").GetComponent<CheckSizeChange>().SizeUp(lastAteValue);
         amountChanged += lastAteValue;
-        if (transform.localScale.x > 4.0f)
+        if (transform.localScale.x > 4.0f && !size3)
         {
             //spriteNum = 2;
-            gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[1];
-            gameObject.GetComponent<Animator>().runtimeAnimatorController = newController[1];
+            StartCoroutine(ChangeSpriteCoroutine(1));
+            
         }
-        if (transform.localScale.x > 2.0f) {
+        if (transform.localScale.x > 2.0f && !size2) {
             //spriteNum = 1;
-            gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[0];
-            gameObject.GetComponent<Animator>().runtimeAnimatorController = newController[0];
+            StartCoroutine(ChangeSpriteCoroutine(0));
+            
         }
     }
 
@@ -86,6 +92,16 @@ public class PlayerEat : MonoBehaviour
         chomping.SetActive(true);
         yield return new WaitForSeconds(0.3f);
         chomping.SetActive(false);
+    }
+
+    public IEnumerator ChangeSpriteCoroutine(int spriteNum)
+    {
+        //var emission = GetComponent<ParticleSystem>().emission; // Stores the module in a local variable
+        //emission.enabled = true; // Applies the new value directly to the Particle System
+        yield return new WaitForSeconds(0.1f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[spriteNum];
+        gameObject.GetComponent<Animator>().runtimeAnimatorController = newController[spriteNum];
+        //emission.enabled = false;
     }
 
     private void OnDrawGizmosSelected() {
