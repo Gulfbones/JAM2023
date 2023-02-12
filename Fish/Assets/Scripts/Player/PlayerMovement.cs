@@ -7,13 +7,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float TargetVelocity { get { return input.Dashing ? dashingVelocity : normalVelocity; } }
+    private float TargetAccVelocity { get { return input.Dashing ? dashAcceleration : acceleration; } }
 
     [SerializeField]
     private float normalVelocity = 4.0f;
     [SerializeField]
-    private float dashingVelocity = 8.0f;
+    private float dashingVelocity = 6.0f;
     [SerializeField]
-    private float acceleration = 2.50f;
+    private float acceleration = 5.50f;
+    [SerializeField]
+    private float dashAcceleration = 10.0f;
     [SerializeField]
     private float rotateSmoothSpeed = 0.15f;
     [SerializeField]
@@ -38,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         rb2D.angularVelocity = 0;
         rb2D.drag = dragCurve.Evaluate(rb2D.velocity.sqrMagnitude / Mathf.Pow(TargetVelocity, 2)) * maxDrag;
 
-        rb2D.AddForce(input.Movement * acceleration * rb2D.mass);
+        rb2D.AddForce(input.Movement * TargetAccVelocity * rb2D.mass);
         rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, TargetVelocity);
 
         float targetAngle = Mathf.Atan2(rb2D.velocity.y, rb2D.velocity.x) * Mathf.Rad2Deg;
