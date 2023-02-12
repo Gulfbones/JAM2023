@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class PlayerEat : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerEat : MonoBehaviour
     private float startingSize;
     [SerializeField]
     private float amountChanged = 0;
+    private Text lastAteFish;
 
     private GameObject cinemaVirtualCamera;
     private CameraGrow camGrowRef;
@@ -46,6 +48,10 @@ public class PlayerEat : MonoBehaviour
                     lastAteValue = fObj.GetFoodPoints();
                     FoodPoints += fObj.GetFoodPoints();
                     StartCoroutine("ChompCoroutine");
+                    if (lastAteFish != null)
+                    {
+                        lastAteFish.text = gameObject.ToString();
+                    }
                     fObj.DestroyObj();
                     Scale(); // properly scales fish
                     camGrowRef.ChangeSize(); // scales the camera with the fish, can be edited via CM vCam1
