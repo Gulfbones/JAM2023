@@ -111,7 +111,7 @@ public class PlayerEat : MonoBehaviour
         {
             //spriteNum = 2;
             size4 = true;
-            eatSize = 5.5f;
+            //eatSize = 5.5f;
             newMinFood = 51.0f;
             StartCoroutine(ChangeSpriteCoroutine(1));
 
@@ -120,7 +120,7 @@ public class PlayerEat : MonoBehaviour
         {
             //spriteNum = 2;
             size3 = true;
-            eatSize = 1.5f;
+            //eatSize = 1.5f;
             newMinFood = 31.0f;
             StartCoroutine(ChangeSpriteCoroutine(1));
             
@@ -128,7 +128,7 @@ public class PlayerEat : MonoBehaviour
         if (transform.localScale.x > 2.0f && !size2) {
             //spriteNum = 1;
             size2 = true;
-            eatSize = 0.8f;
+            //eatSize = 0.8f;
             newMinFood = 11f;
             StartCoroutine(ChangeSpriteCoroutine(0));
             
@@ -136,6 +136,7 @@ public class PlayerEat : MonoBehaviour
         camGrowRef.ChangeSize(transform.localScale.x); // scales the camera with the fish, can be edited via CM vCam1
         //GameObject.Find("SIZE").gameObject.GetComponent<TextMeshPro>().text = "Size" + transform.localScale.x;
         sizeText.text = "Size: " + Mathf.Round(transform.localScale.x * 100f) / 100f;
+        eatSize = 0.35f + (0.35f*(transform.localScale.x/2));
     }
 
     public IEnumerator ChompCoroutine()
@@ -174,6 +175,10 @@ public class PlayerEat : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (FoodPoints > 80 && collision.gameObject.tag == "Hostile")
+        {
+            Destroy(collision.gameObject);
+        }
         if(collision.gameObject.tag == "Hostile" && !damagedRecently && FoodPoints < 70)
         {
             damagedRecently = true;
