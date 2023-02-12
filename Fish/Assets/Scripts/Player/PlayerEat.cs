@@ -101,7 +101,7 @@ public class PlayerEat : MonoBehaviour
             StartCoroutine(ChangeSpriteCoroutine(0));
             
         }
-        camGrowRef.ChangeSize(transform.localScale.x * 2); // scales the camera with the fish, can be edited via CM vCam1
+        camGrowRef.ChangeSize(transform.localScale.x); // scales the camera with the fish, can be edited via CM vCam1
     }
 
     public IEnumerator ChompCoroutine()
