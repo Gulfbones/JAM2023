@@ -1516,3 +1516,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 602cd06310cde3f4b91d3f6a9eceed18, type: 3}
+--- !u!1001 &5488837768147607838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.47433
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2757791
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0660221
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615309, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488837766570615310, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
+      propertyPath: m_Name
+      value: FishShrink PSys
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d912810a2c375a64ab6afd528f3f7f77, type: 3}
