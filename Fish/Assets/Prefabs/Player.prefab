@@ -405,10 +405,11 @@ MonoBehaviour:
   mouthTransform: {fileID: 7730103188640788786}
   eatSize: 0.35
   newSprite:
-  - {fileID: 21300000, guid: b7e5508d82086a54cb7dc5b890caef2d, type: 3}
-  - {fileID: 21300000, guid: 21adf6283d2a95b40b3d199365e4227f, type: 3}
-  - {fileID: 21300000, guid: 50651ff818ddfdd46b6c0ddfcea85ee6, type: 3}
-  newController: []
+  - {fileID: -34815884, guid: e8f13995f904a2948ac3bb220942ee63, type: 3}
+  - {fileID: 198662740, guid: d92af415ce4c8664eb80fbb19e6b9c4d, type: 3}
+  newController:
+  - {fileID: 9100000, guid: 5020a00f494fbd946861e112531b3449, type: 2}
+  - {fileID: 9100000, guid: 875ec7a1416411546ba0ab564654bca8, type: 2}
   spriteNum: 0
   amountChanged: 0
 --- !u!50 &7730103187386899126

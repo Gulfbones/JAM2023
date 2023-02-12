@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
 using UnityEditor.Animations;
+using UnityEngine.Windows;
 
 public class PlayerEat : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class PlayerEat : MonoBehaviour
     private float amountChanged = 0;
     private Text lastAteFish;
 
+    private PlayerInput pInput;
+
     private GameObject cinemaVirtualCamera;
     private CameraGrow camGrowRef;
     private GameObject chomping;
@@ -41,6 +44,7 @@ public class PlayerEat : MonoBehaviour
     private void Start()
     {
         startingFood = FoodPoints;
+        pInput = GetComponent<PlayerInput>();
         cinemaVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>().gameObject;
         camGrowRef = cinemaVirtualCamera.GetComponent<CameraGrow>();
         startingSize = transform.localScale.x;
@@ -50,16 +54,21 @@ public class PlayerEat : MonoBehaviour
         size2 = false;
         size3 = false;
         damagedRecently = false;
-        newMinSize = 5.0f;
+        newMinSize = 6.0f;
     }
 
     void Update()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(mouthTransform.position, eatSize, transform.forward, 0.1f);
-        if (Input.GetKeyDown(KeyCode.R))
+        if (pInput.ShrinkFish)
         {
-            FoodPoints -= 0.1f;
-            Scale();
+            if ((FoodPoints >= newMinSize))
+            {
+                FoodPoints -= 0.1f;
+                //FoodPoints -= FoodPoints * 0.05f;
+                Scale();
+            }
+            //Scale();
         }
         foreach(RaycastHit2D hit in hits) {
             FoodObject fObj;
@@ -89,7 +98,7 @@ public class PlayerEat : MonoBehaviour
             //spriteNum = 2;
             size3 = true;
             eatSize = 1.5f;
-            newMinSize = 40f;
+            newMinSize = 21f;
             StartCoroutine(ChangeSpriteCoroutine(1));
             
         }
@@ -97,11 +106,11 @@ public class PlayerEat : MonoBehaviour
             //spriteNum = 1;
             size2 = true;
             eatSize = 0.8f;
-            newMinSize = 20f;
+            newMinSize = 11f;
             StartCoroutine(ChangeSpriteCoroutine(0));
             
         }
-        camGrowRef.ChangeSize(transform.localScale.x * 2); // scales the camera with the fish, can be edited via CM vCam1
+        camGrowRef.ChangeSize(transform.localScale.x); // scales the camera with the fish, can be edited via CM vCam1
     }
 
     public IEnumerator ChompCoroutine()
