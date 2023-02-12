@@ -44,6 +44,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShrinkFish"",
+                    ""type"": ""Button"",
+                    ""id"": ""eeef5b10-747f-40ee-8786-6732fcab0e9a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -178,6 +187,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""762beee7-7905-4330-8e61-6673a0339399"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShrinkFish"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4af8f749-584f-44ac-84ed-90ef6eabd7c1"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShrinkFish"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -188,6 +219,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_ActionMap = asset.FindActionMap("ActionMap", throwIfNotFound: true);
         m_ActionMap_Movement = m_ActionMap.FindAction("Movement", throwIfNotFound: true);
         m_ActionMap_Dash = m_ActionMap.FindAction("Dash", throwIfNotFound: true);
+        m_ActionMap_ShrinkFish = m_ActionMap.FindAction("ShrinkFish", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,12 +281,14 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private IActionMapActions m_ActionMapActionsCallbackInterface;
     private readonly InputAction m_ActionMap_Movement;
     private readonly InputAction m_ActionMap_Dash;
+    private readonly InputAction m_ActionMap_ShrinkFish;
     public struct ActionMapActions
     {
         private @PlayerInputActions m_Wrapper;
         public ActionMapActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_ActionMap_Movement;
         public InputAction @Dash => m_Wrapper.m_ActionMap_Dash;
+        public InputAction @ShrinkFish => m_Wrapper.m_ActionMap_ShrinkFish;
         public InputActionMap Get() { return m_Wrapper.m_ActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -270,6 +304,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Dash.started -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnDash;
+                @ShrinkFish.started -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnShrinkFish;
+                @ShrinkFish.performed -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnShrinkFish;
+                @ShrinkFish.canceled -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnShrinkFish;
             }
             m_Wrapper.m_ActionMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -280,6 +317,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @ShrinkFish.started += instance.OnShrinkFish;
+                @ShrinkFish.performed += instance.OnShrinkFish;
+                @ShrinkFish.canceled += instance.OnShrinkFish;
             }
         }
     }
@@ -288,5 +328,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnShrinkFish(InputAction.CallbackContext context);
     }
 }
