@@ -753,11 +753,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3633042458905633783, guid: e0920121b118fe34f8600aac090c84b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.559998
+      value: -15.480438
       objectReference: {fileID: 0}
     - target: {fileID: 3633042458905633783, guid: e0920121b118fe34f8600aac090c84b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.46426
+      value: -16.853191
       objectReference: {fileID: 0}
     - target: {fileID: 3633042458905633783, guid: e0920121b118fe34f8600aac090c84b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1904,11 +1904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.6
+      value: -18.5
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.6
+      value: 22.4
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2733,11 +2733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730103187386899125, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7730103187386899125, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 7730103187386899125, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2866,11 +2866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.169998
+      value: -20.069992
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.679996
+      value: 23.48
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3324,7 +3324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247504277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.8, y: 3.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3726,11 +3726,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257845469712784881, guid: 2825f4d72fe70e743bdd7b7c02de3a25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.539993
+      value: -19.460434
       objectReference: {fileID: 0}
     - target: {fileID: 7257845469712784881, guid: 2825f4d72fe70e743bdd7b7c02de3a25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.190001
+      value: -9.578932
       objectReference: {fileID: 0}
     - target: {fileID: 7257845469712784881, guid: 2825f4d72fe70e743bdd7b7c02de3a25, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4063,7 +4063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306804140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.93, y: 3.86, z: 0}
+  m_LocalPosition: {x: -4.06, y: 2.43, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5046,6 +5046,7 @@ GameObject:
   - component: {fileID: 396677854}
   - component: {fileID: 396677853}
   - component: {fileID: 396677856}
+  - component: {fileID: 396677857}
   m_Layer: 0
   m_Name: Sprite Shape Profile (18)
   m_TagString: Untagged
@@ -5415,6 +5416,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &396677857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396677852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 120
+  isFish: 0
 --- !u!1001 &398967523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7178,6 +7195,7 @@ GameObject:
   - component: {fileID: 511048927}
   - component: {fileID: 511048926}
   - component: {fileID: 511048929}
+  - component: {fileID: 511048930}
   m_Layer: 0
   m_Name: Sprite Shape Profile (11)
   m_TagString: Untagged
@@ -7482,7 +7500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511048925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 148.02, y: 8.149994, z: 0}
+  m_LocalPosition: {x: 146.12001, y: 8.949997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7673,6 +7691,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &511048930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511048925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 100
+  isFish: 0
 --- !u!4 &519297502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5476453965907466980, guid: 62a3b77db4fed7541a42365a4ca9d264, type: 3}
@@ -8727,11 +8761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.289993
+      value: -16.210434
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.65
+      value: -16.03893
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9183,6 +9217,7 @@ GameObject:
   - component: {fileID: 628553708}
   - component: {fileID: 628553707}
   - component: {fileID: 628553710}
+  - component: {fileID: 628553711}
   m_Layer: 0
   m_Name: Sprite Shape Profile (17)
   m_TagString: Untagged
@@ -9679,6 +9714,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &628553711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628553706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 30
+  requiredFoodPoints: 150
+  isFish: 0
 --- !u!1001 &631694054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11009,11 +11060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.559998
+      value: -30.459991
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.95
+      value: 17.750004
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13465,7 +13516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889562527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.46, y: -7.15, z: 0}
+  m_LocalPosition: {x: -9.12, y: -6.64, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13487,7 +13538,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.92
+  m_Radius: 3
 --- !u!114 &889562530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15111,11 +15162,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976980824339654900, guid: ed50d36900552ae4f8f120b8329b42f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.179565
+      value: -14.1
       objectReference: {fileID: 0}
     - target: {fileID: 8976980824339654900, guid: ed50d36900552ae4f8f120b8329b42f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.111069
+      value: -16.5
       objectReference: {fileID: 0}
     - target: {fileID: 8976980824339654900, guid: ed50d36900552ae4f8f120b8329b42f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16077,6 +16128,7 @@ GameObject:
   - component: {fileID: 1095063024}
   - component: {fileID: 1095063023}
   - component: {fileID: 1095063022}
+  - component: {fileID: 1095063025}
   m_Layer: 0
   m_Name: Sprite Shape Profile (20)
   m_TagString: Untagged
@@ -16303,6 +16355,22 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: -1.1262197, y: -0.056377888, z: 0}
     m_Extent: {x: 4.723242, y: 4.0158215, z: 0}
+--- !u!114 &1095063025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095063020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 15
+  requiredFoodPoints: 70
+  isFish: 0
 --- !u!1001 &1100528169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16570,11 +16638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.60064
+      value: -22.52108
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.036404
+      value: -17.425335
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20344,6 +20412,7 @@ GameObject:
   - component: {fileID: 1144248537}
   - component: {fileID: 1144248536}
   - component: {fileID: 1144248539}
+  - component: {fileID: 1144248540}
   m_Layer: 0
   m_Name: Sprite Shape Profile (15)
   m_TagString: Untagged
@@ -20781,6 +20850,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1144248540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144248535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 100
+  isFish: 0
 --- !u!1001 &1144698887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20925,6 +21010,7 @@ GameObject:
   - component: {fileID: 1146778083}
   - component: {fileID: 1146778082}
   - component: {fileID: 1146778085}
+  - component: {fileID: 1146778086}
   m_Layer: 0
   m_Name: Sprite Shape Profile (12)
   m_TagString: Untagged
@@ -22215,6 +22301,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1146778086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146778081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 50
+  requiredFoodPoints: 200
+  isFish: 0
 --- !u!1001 &1147913603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22410,6 +22512,10 @@ PrefabInstance:
     - target: {fileID: 4959456308802385792, guid: 23050a00ff5930647a9208bbf6d6133a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959456308802385793, guid: 23050a00ff5930647a9208bbf6d6133a, type: 3}
+      propertyPath: lightAngler
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4959456308802385795, guid: 23050a00ff5930647a9208bbf6d6133a, type: 3}
       propertyPath: m_Name
@@ -22639,11 +22745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.230011
+      value: -25.130005
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.296833
+      value: 22.096836
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23710,11 +23816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.269997
+      value: -21.190437
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.58
+      value: -16.968931
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24969,11 +25075,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.779999
+      value: -25.679993
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.73
+      value: 22.530003
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25426,6 +25532,7 @@ GameObject:
   - component: {fileID: 1353611161}
   - component: {fileID: 1353611160}
   - component: {fileID: 1353611163}
+  - component: {fileID: 1353611164}
   m_Layer: 0
   m_Name: Sprite Shape Profile (16)
   m_TagString: Untagged
@@ -25981,11 +26088,30 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+<<<<<<< Updated upstream
 --- !u!4 &1370893795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 427687231677932916, guid: 602cd06310cde3f4b91d3f6a9eceed18, type: 3}
   m_PrefabInstance: {fileID: 659527341}
   m_PrefabAsset: {fileID: 0}
+=======
+--- !u!114 &1353611164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353611159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 140
+  isFish: 0
+>>>>>>> Stashed changes
 --- !u!1001 &1374423122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27439,9 +27565,10 @@ GameObject:
   - component: {fileID: 1465943656}
   - component: {fileID: 1465943655}
   - component: {fileID: 1465943658}
+  - component: {fileID: 1465943659}
   m_Layer: 0
   m_Name: Sprite Shape Profile (9)
-  m_TagString: Untagged
+  m_TagString: Final
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28334,6 +28461,109 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+<<<<<<< Updated upstream
+=======
+--- !u!114 &1465943659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465943654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 100
+  requiredFoodPoints: 250
+  isFish: 0
+--- !u!1 &1467541666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467541668}
+  - component: {fileID: 1467541667}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1467541667
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467541666}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 449483393
+  m_SortingLayer: -1
+  m_SortingOrder: -100
+  m_Sprite: {fileID: -1646170369, guid: 0b05dde7a8209744d8cd7cb53dda4218, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1467541668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467541666}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 48.8, y: -40.9, z: 0}
+  m_LocalScale: {x: 250, y: 170, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1001 &1467933641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31076,7 +31306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640747122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.71, y: -5.07, z: 0}
+  m_LocalPosition: {x: 1.2, y: -4.19, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31098,7 +31328,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6.33
+  m_Radius: 4
 --- !u!114 &1640747125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32709,11 +32939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257845469712784881, guid: 2825f4d72fe70e743bdd7b7c02de3a25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.550003
+      value: -23.350006
       objectReference: {fileID: 0}
     - target: {fileID: 7257845469712784881, guid: 2825f4d72fe70e743bdd7b7c02de3a25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.929996
+      value: 26.629997
       objectReference: {fileID: 0}
     - target: {fileID: 7257845469712784881, guid: 2825f4d72fe70e743bdd7b7c02de3a25, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32963,6 +33193,7 @@ GameObject:
   - component: {fileID: 1735110742}
   - component: {fileID: 1735110741}
   - component: {fileID: 1735110744}
+  - component: {fileID: 1735110745}
   m_Layer: 0
   m_Name: Sprite Shape Profile (13)
   m_TagString: Untagged
@@ -33326,6 +33557,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1735110745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735110740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 80
+  isFish: 0
 --- !u!1001 &1735796300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33474,11 +33721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.690002
+      value: -18.589996
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.949997
+      value: 22.75
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34202,11 +34449,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.0099945
+      value: -11.930435
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.3
+      value: -23.68893
       objectReference: {fileID: 0}
     - target: {fileID: 3500766960582426633, guid: 16da90aa847baa94ea48c144ba17ff7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34730,6 +34977,7 @@ GameObject:
   - component: {fileID: 1832084102}
   - component: {fileID: 1832084101}
   - component: {fileID: 1832084104}
+  - component: {fileID: 1832084105}
   m_Layer: 0
   m_Name: Sprite Shape Profile (10)
   m_TagString: Untagged
@@ -34954,7 +35202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832084100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 142.76999, y: 51.77, z: 0}
+  m_LocalPosition: {x: 144.84955, y: 52.38107, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35115,6 +35363,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1832084105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832084100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 80
+  isFish: 0
 --- !u!1 &1840499426
 GameObject:
   m_ObjectHideFlags: 0
@@ -35205,11 +35469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5476453965907466980, guid: 62a3b77db4fed7541a42365a4ca9d264, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.688858
+      value: -28.588852
       objectReference: {fileID: 0}
     - target: {fileID: 5476453965907466980, guid: 62a3b77db4fed7541a42365a4ca9d264, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.051289
+      value: 23.851292
       objectReference: {fileID: 0}
     - target: {fileID: 5476453965907466980, guid: 62a3b77db4fed7541a42365a4ca9d264, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35493,7 +35757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866149265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.8, y: 3.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36884,11 +37148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976980824339654900, guid: ed50d36900552ae4f8f120b8329b42f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.57
+      value: -24.49044
       objectReference: {fileID: 0}
     - target: {fileID: 8976980824339654900, guid: ed50d36900552ae4f8f120b8329b42f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.199999
+      value: -21.58893
       objectReference: {fileID: 0}
     - target: {fileID: 8976980824339654900, guid: ed50d36900552ae4f8f120b8329b42f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37018,6 +37282,7 @@ GameObject:
   - component: {fileID: 1966133441}
   - component: {fileID: 1966133440}
   - component: {fileID: 1966133443}
+  - component: {fileID: 1966133444}
   m_Layer: 0
   m_Name: Sprite Shape Profile (14)
   m_TagString: Untagged
@@ -37466,6 +37731,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1966133444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966133439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 120
+  isFish: 0
 --- !u!1001 &1977501973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38018,6 +38299,7 @@ GameObject:
   - component: {fileID: 2043680835}
   - component: {fileID: 2043680834}
   - component: {fileID: 2043680833}
+  - component: {fileID: 2043680836}
   m_Layer: 0
   m_Name: Sprite Shape Profile (19)
   m_TagString: Untagged
@@ -38356,6 +38638,22 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: -0.69746304, y: -9.975094, z: 0}
     m_Extent: {x: 8.285666, y: 10.842699, z: 0}
+--- !u!114 &2043680836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043680831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 120
+  isFish: 0
 --- !u!1001 &2049220391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39253,11 +39551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.659996
+      value: -23.580437
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.559998
+      value: -17.948929
       objectReference: {fileID: 0}
     - target: {fileID: 3654994253872216801, guid: f974fcd575ec01949bd04fee8f41ce09, type: 3}
       propertyPath: m_LocalPosition.z
