@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7507143319564010716}
   - component: {fileID: 7507143319564010713}
   - component: {fileID: 849274950964600389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Med Green Fish
   m_TagString: Food
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7507143319564010714}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -122,9 +122,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 0
+  m_Offset: {x: -0.01896107, y: 0.030337995}
+  m_Size: {x: 1.0530916, y: 0.5752727}
+  m_Direction: 1
 --- !u!114 &7507143319564010713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   fleeMoveSpeed: 25
   attackMoveSpeed: 30
   parentSpawnPoint: {fileID: 0}
+  state: 0
 --- !u!114 &849274950964600389
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -64,8 +64,8 @@ public class PlayerEat : MonoBehaviour
         transform.localScale = new Vector2(startingSize * FoodPoints / 5, startingSize * FoodPoints / 5);
         transform.Find("sprite").GetComponent<CheckSizeChange>().SizeUp(lastAteValue);
         amountChanged += lastAteValue;
-        if (amountChanged >= 3 && spriteNum <= newSprite.Length) {
-            amountChanged = amountChanged - 3;
+        if (amountChanged >= 5 && spriteNum <= newSprite.Length) {
+            amountChanged = amountChanged - 5;
             spriteNum++;
         }
         gameObject.GetComponent<SpriteRenderer>().sprite = newSprite[spriteNum];

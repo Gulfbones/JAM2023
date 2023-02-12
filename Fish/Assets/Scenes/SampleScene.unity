@@ -2256,7 +2256,7 @@ SpriteRenderer:
   m_SortingLayerID: 449483393
   m_SortingLayer: -1
   m_SortingOrder: -100
-  m_Sprite: {fileID: -1646170369, guid: 0b05dde7a8209744d8cd7cb53dda4218, type: 3}
+  m_Sprite: {fileID: 375854617, guid: b5b50bdba5efc624a8b4f48e046d89dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3239,7 +3239,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  Owner: {fileID: 7198863275716607465}
 --- !u!114 &1111576254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4394,26 +4393,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Med Green Fish
       objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0530916
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Size.y
-      value: 0.5752727
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.01896107
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.030337995
-      objectReference: {fileID: 0}
-    - target: {fileID: 7507143319564010716, guid: aa06ace772223994e8ed91197c24312c, type: 3}
-      propertyPath: m_Direction
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa06ace772223994e8ed91197c24312c, type: 3}
 --- !u!1001 &926678097385076468
@@ -4599,10 +4578,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3275206569678748229, guid: b9e58ec75f2af374da92bbb024e9e421, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3275206569678748229, guid: b9e58ec75f2af374da92bbb024e9e421, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.16
       objectReference: {fileID: 0}
@@ -4645,10 +4620,6 @@ PrefabInstance:
     - target: {fileID: 3275206569678748230, guid: b9e58ec75f2af374da92bbb024e9e421, type: 3}
       propertyPath: m_Name
       value: Koi Fish
-      objectReference: {fileID: 0}
-    - target: {fileID: 3275206569678748280, guid: b9e58ec75f2af374da92bbb024e9e421, type: 3}
-      propertyPath: m_FlipX
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e58ec75f2af374da92bbb024e9e421, type: 3}

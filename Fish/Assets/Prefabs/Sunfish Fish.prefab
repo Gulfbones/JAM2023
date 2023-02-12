@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1800836033490739893}
   - component: {fileID: 1800836033490739892}
   - component: {fileID: 1800836033490739895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sunfish Fish
   m_TagString: Food
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800836033490739889}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.092, y: 0.753, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   fleeMoveSpeed: 25
   attackMoveSpeed: 30
   parentSpawnPoint: {fileID: 0}
+  state: 0
 --- !u!114 &1800836033490739895
 MonoBehaviour:
   m_ObjectHideFlags: 0
