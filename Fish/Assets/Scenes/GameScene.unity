@@ -11398,11 +11398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2901199071536889755, guid: 26b3a287249c51f419685df88c7f9962, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 2901199071536889755, guid: 26b3a287249c51f419685df88c7f9962, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.93
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2901199071536889755, guid: 26b3a287249c51f419685df88c7f9962, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11438,7 +11438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2901199071536889758, guid: 26b3a287249c51f419685df88c7f9962, type: 3}
       propertyPath: m_Name
-      value: Bottle Cap
+      value: Debug Bottle Cap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26b3a287249c51f419685df88c7f9962, type: 3}
@@ -33304,7 +33304,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5888298846118963090, guid: e47f00ff7365a3f4e9c106a15d0c5701, type: 3}
       propertyPath: m_Name
-      value: Crumpled Paper
+      value: Debug Crumpled Paper
       objectReference: {fileID: 0}
     - target: {fileID: 5888298846118963093, guid: e47f00ff7365a3f4e9c106a15d0c5701, type: 3}
       propertyPath: foodWorth
@@ -33316,11 +33316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5888298846118963095, guid: e47f00ff7365a3f4e9c106a15d0c5701, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.071501
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 5888298846118963095, guid: e47f00ff7365a3f4e9c106a15d0c5701, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6423904
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 5888298846118963095, guid: e47f00ff7365a3f4e9c106a15d0c5701, type: 3}
       propertyPath: m_LocalPosition.z

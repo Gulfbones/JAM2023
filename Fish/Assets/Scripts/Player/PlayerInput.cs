@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     public bool Dashing { get { return _dashing;} private set { _dashing = value;} }
 
     private bool _shrinkFish;
-    public bool ShrinkFish { get { return _shrinkFish; } private set { _shrinkFish = ShrinkFish; } }
+    public bool ShrinkFish { get { return _shrinkFish; } private set { _shrinkFish = value; } }
 
     PlayerInputActions input;
 
