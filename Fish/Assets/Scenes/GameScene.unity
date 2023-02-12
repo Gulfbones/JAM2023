@@ -3079,6 +3079,30 @@ PrefabInstance:
       propertyPath: sizeText
       value: 
       objectReference: {fileID: 165515184}
+    - target: {fileID: 7730103187386899112, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
+      propertyPath: newSprite.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730103187386899112, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
+      propertyPath: newSprite.Array.data[1]
+      value: 
+      objectReference: {fileID: 555445964, guid: b1943f293ee1d454783008247b4ffcc7, type: 3}
+    - target: {fileID: 7730103187386899112, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
+      propertyPath: newSprite.Array.data[2]
+      value: 
+      objectReference: {fileID: 198662740, guid: d92af415ce4c8664eb80fbb19e6b9c4d, type: 3}
+    - target: {fileID: 7730103187386899112, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
+      propertyPath: newController.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730103187386899112, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
+      propertyPath: newController.Array.data[1]
+      value: 
+      objectReference: {fileID: 9100000, guid: 1ddf553cab0c4e544933137adf84f4d2, type: 2}
+    - target: {fileID: 7730103187386899112, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
+      propertyPath: newController.Array.data[2]
+      value: 
+      objectReference: {fileID: 9100000, guid: 875ec7a1416411546ba0ab564654bca8, type: 2}
     - target: {fileID: 7730103187386899123, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
       propertyPath: m_Name
       value: Player
