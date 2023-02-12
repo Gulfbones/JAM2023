@@ -26,6 +26,8 @@ public class PlayerInput : MonoBehaviour
         input.ActionMap.ShrinkFish.performed += ctx => ShrinkFish = true;
         input.ActionMap.ShrinkFish.canceled += ctx => ShrinkFish = false;
 
+        input.ActionMap.CloseGame.performed += ctx => Application.Quit();
+
         
 
         input.Enable();

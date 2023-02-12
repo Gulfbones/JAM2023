@@ -53,6 +53,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CloseGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""05adb40e-874c-4b6a-aba9-844768cd42a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -207,6 +216,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ShrinkFish"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d198b208-3547-4137-a3c2-8b8c65484e55"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ae0853d-af14-4b96-83cc-f16e74cf1af7"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseGame"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -546,6 +577,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_ActionMap_Movement = m_ActionMap.FindAction("Movement", throwIfNotFound: true);
         m_ActionMap_Dash = m_ActionMap.FindAction("Dash", throwIfNotFound: true);
         m_ActionMap_ShrinkFish = m_ActionMap.FindAction("ShrinkFish", throwIfNotFound: true);
+        m_ActionMap_CloseGame = m_ActionMap.FindAction("CloseGame", throwIfNotFound: true);
         // MenuMap
         m_MenuMap = asset.FindActionMap("MenuMap", throwIfNotFound: true);
         m_MenuMap_Nav = m_MenuMap.FindAction("Nav", throwIfNotFound: true);
@@ -616,6 +648,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_ActionMap_Movement;
     private readonly InputAction m_ActionMap_Dash;
     private readonly InputAction m_ActionMap_ShrinkFish;
+    private readonly InputAction m_ActionMap_CloseGame;
     public struct ActionMapActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -623,6 +656,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_ActionMap_Movement;
         public InputAction @Dash => m_Wrapper.m_ActionMap_Dash;
         public InputAction @ShrinkFish => m_Wrapper.m_ActionMap_ShrinkFish;
+        public InputAction @CloseGame => m_Wrapper.m_ActionMap_CloseGame;
         public InputActionMap Get() { return m_Wrapper.m_ActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -641,6 +675,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @ShrinkFish.started -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnShrinkFish;
                 @ShrinkFish.performed -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnShrinkFish;
                 @ShrinkFish.canceled -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnShrinkFish;
+                @CloseGame.started -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnCloseGame;
+                @CloseGame.performed -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnCloseGame;
+                @CloseGame.canceled -= m_Wrapper.m_ActionMapActionsCallbackInterface.OnCloseGame;
             }
             m_Wrapper.m_ActionMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -654,6 +691,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @ShrinkFish.started += instance.OnShrinkFish;
                 @ShrinkFish.performed += instance.OnShrinkFish;
                 @ShrinkFish.canceled += instance.OnShrinkFish;
+                @CloseGame.started += instance.OnCloseGame;
+                @CloseGame.performed += instance.OnCloseGame;
+                @CloseGame.canceled += instance.OnCloseGame;
             }
         }
     }
@@ -736,6 +776,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnShrinkFish(InputAction.CallbackContext context);
+        void OnCloseGame(InputAction.CallbackContext context);
     }
     public interface IMenuMapActions
     {

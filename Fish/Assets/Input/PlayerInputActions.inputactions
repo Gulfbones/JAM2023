@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CloseGame",
+                    "type": "Button",
+                    "id": "05adb40e-874c-4b6a-aba9-844768cd42a5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -185,6 +194,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ShrinkFish",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d198b208-3547-4137-a3c2-8b8c65484e55",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ae0853d-af14-4b96-83cc-f16e74cf1af7",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseGame",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
