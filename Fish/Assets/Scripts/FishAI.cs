@@ -22,6 +22,7 @@ public class FishAI : MonoBehaviour
     private Vector3 destination;
     private bool wanderCoRunning;
     public FishSpawnPoint parentSpawnPoint;
+    float rotRefVelocity;
     //[SerializeField] private 
     private enum FishState
     {
@@ -88,6 +89,10 @@ public class FishAI : MonoBehaviour
                 break;
 
         }
+        float targetAngle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        float angle = Mathf.SmoothDampAngle(rb.rotation, targetAngle, ref rotRefVelocity, 0.15f);
+        rb.rotation = angle;
+        sr.flipY = rb.velocity.x < 0;
         //rb.AddForce(destination);
         //transform.Find("Debug Square").gameObject.transform.position = destination;
     }
@@ -115,6 +120,7 @@ public class FishAI : MonoBehaviour
     */
     private void LateUpdate()
     {
+        /*
         if (rb.velocity.x > 0)
         {
             sr.flipX = true;
@@ -123,7 +129,7 @@ public class FishAI : MonoBehaviour
         {
             sr.flipX = false;
         }
-
+        */
     }
 
     public IEnumerator WanderCoroutine()
