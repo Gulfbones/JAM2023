@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
+using UnityEngine.Animations;
 using UnityEngine.Windows;
+using TMPro;
+//using UnityEditor.Animations;
 
 public class PlayerEat : MonoBehaviour
 {
@@ -20,7 +23,7 @@ public class PlayerEat : MonoBehaviour
     [SerializeField] 
     private Sprite[] newSprite;
     [SerializeField]
-    private AnimatorController[] newController;
+    private RuntimeAnimatorController[] newController;
     [SerializeField] 
     private int spriteNum = 0;
     private float startingSize;
@@ -28,6 +31,8 @@ public class PlayerEat : MonoBehaviour
     [SerializeField]
     private float amountChanged = 0;
     private Text lastAteFish;
+    [SerializeField]
+    private TextMeshProUGUI sizeText;
 
     private PlayerInput pInput;
 
@@ -113,6 +118,8 @@ public class PlayerEat : MonoBehaviour
             
         }
         camGrowRef.ChangeSize(transform.localScale.x); // scales the camera with the fish, can be edited via CM vCam1
+        //GameObject.Find("SIZE").gameObject.GetComponent<TextMeshPro>().text = "Size" + transform.localScale.x;
+        sizeText.text = "Size: " + Mathf.Round(transform.localScale.x * 100f) / 100f;
     }
 
     public IEnumerator ChompCoroutine()
