@@ -17,7 +17,7 @@ public class FishSpawnPoint : MonoBehaviour {
     private List<GameObject> fishesToSpawn = new List<GameObject>();
 
     private CircleCollider2D circleCollider;
-    private static int maxFishCountGlobal = 30;
+    private static int maxFishCountGlobal = 500;
     public static int fishCountGlobal = 0;
     private static GameObject player;
 

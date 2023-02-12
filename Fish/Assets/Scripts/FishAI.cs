@@ -70,7 +70,6 @@ public class FishAI : MonoBehaviour
                 else
                 {
                     rb.AddForce((destination - transform.position).normalized * normalMoveSpeed);
-
                 }
                 break;
             case FishState.ATTACKING:
@@ -141,7 +140,7 @@ public class FishAI : MonoBehaviour
         yield return new WaitForSeconds(count);
         //Debug.Log("set none");
         destination = gameObject.transform.position*0;
-        wanderCoRunning =false;
+        wanderCoRunning = false;
     }
 
     public IEnumerator WaitCoroutine()
@@ -163,6 +162,7 @@ public class FishAI : MonoBehaviour
     {
         destination = gameObject.transform.parent.position;
         rb.AddForce((destination - transform.position).normalized * normalMoveSpeed);
+        wanderCoRunning = false;
         state = FishState.WANDERING;
         //yield return new WaitForSeconds(2);
         //state = FishState.WANDERING;
