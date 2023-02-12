@@ -1318,6 +1318,7 @@ MonoBehaviour:
   worldXMax: 150
   lightXOffset: -1.5
   lightMaxOffset: -1
+  baseIntensity: 0.5
   lightYOffset: 2
 --- !u!114 &435284661
 MonoBehaviour:
@@ -3292,6 +3293,7 @@ MonoBehaviour:
   worldXMax: 150
   lightXOffset: 0
   lightMaxOffset: -1
+  baseIntensity: 0.5
   lightYOffset: 1
 --- !u!114 &927216825
 MonoBehaviour:
@@ -14028,6 +14030,7 @@ MonoBehaviour:
   worldXMax: 150
   lightXOffset: 0
   lightMaxOffset: -1
+  baseIntensity: 0.2
   lightYOffset: 1
 --- !u!114 &2092222877
 MonoBehaviour:

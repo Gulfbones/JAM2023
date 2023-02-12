@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering.Universal;
 using UnityEngine;
 
 public class LightRayMovement : MonoBehaviour
@@ -14,6 +15,9 @@ public class LightRayMovement : MonoBehaviour
     private float lightXOffset = 0f;
     [SerializeField]
     private float lightMaxOffset = 5f;
+    [SerializeField]
+    private float baseIntensity = 0.5f;
+
 
     //rewrite this to take the base vector from the light potentially
     [SerializeField] 
@@ -23,13 +27,31 @@ public class LightRayMovement : MonoBehaviour
     void Start()
     {
                 mainCamera = FindObjectOfType<Camera>().gameObject.transform;
+                float sunIntensity = gameObject.GetComponent<Light2D>().intensity;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
+        float sunIntensity = gameObject.GetComponent<Light2D>().intensity;
         Vector3 camPosition = mainCamera.position;
         float camXPosition = camPosition.x;
+        if((camXPosition > 22 && camXPosition < 131) || camXPosition > 140){
+            if(sunIntensity >0){
+                sunIntensity-= 0.001f;
+            }
+            else{
+                sunIntensity = 0f;
+            }
+        }
+        else{
+            if(sunIntensity < baseIntensity){
+                sunIntensity+= 0.001f;
+            }
+            else{
+                sunIntensity = baseIntensity;
+            }
+        }
+        gameObject.GetComponent<Light2D>().intensity = sunIntensity;
         float worldDelta = worldXMax - worldXMin;
         float lightPositionFactor = camXPosition/worldDelta;
         float newLightPosition = camXPosition + lightMaxOffset*lightPositionFactor;
