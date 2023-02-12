@@ -10276,6 +10276,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75e14bec40daeba46a84409ee8b33aae, type: 3}
+--- !u!1001 &1505466602127533170
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133523, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505466600480133548, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
+      propertyPath: m_Name
+      value: Kelp Animation
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6ef4bf0fef0f41488fd6462fda5c20c, type: 3}
 --- !u!1001 &1800836032414396042
 PrefabInstance:
   m_ObjectHideFlags: 0
