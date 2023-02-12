@@ -2733,11 +2733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730103187386899125, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7730103187386899125, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 7730103187386899125, guid: b4462b9b0d995ee4b9c7baec06e920f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3324,7 +3324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247504277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.5, y: 2.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5046,6 +5046,7 @@ GameObject:
   - component: {fileID: 396677854}
   - component: {fileID: 396677853}
   - component: {fileID: 396677856}
+  - component: {fileID: 396677857}
   m_Layer: 0
   m_Name: Sprite Shape Profile (18)
   m_TagString: Untagged
@@ -5415,6 +5416,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &396677857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396677852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 100
+  isFish: 0
 --- !u!1001 &398967523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7178,6 +7195,7 @@ GameObject:
   - component: {fileID: 511048927}
   - component: {fileID: 511048926}
   - component: {fileID: 511048929}
+  - component: {fileID: 511048930}
   m_Layer: 0
   m_Name: Sprite Shape Profile (11)
   m_TagString: Untagged
@@ -7673,6 +7691,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &511048930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511048925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 90
+  isFish: 0
 --- !u!4 &519297502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5476453965907466980, guid: 62a3b77db4fed7541a42365a4ca9d264, type: 3}
@@ -9183,6 +9217,7 @@ GameObject:
   - component: {fileID: 628553708}
   - component: {fileID: 628553707}
   - component: {fileID: 628553710}
+  - component: {fileID: 628553711}
   m_Layer: 0
   m_Name: Sprite Shape Profile (17)
   m_TagString: Untagged
@@ -9679,6 +9714,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &628553711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628553706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 30
+  requiredFoodPoints: 120
+  isFish: 0
 --- !u!1001 &631694054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16077,6 +16128,7 @@ GameObject:
   - component: {fileID: 1095063024}
   - component: {fileID: 1095063023}
   - component: {fileID: 1095063022}
+  - component: {fileID: 1095063025}
   m_Layer: 0
   m_Name: Sprite Shape Profile (20)
   m_TagString: Untagged
@@ -16303,6 +16355,22 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: -1.1262197, y: -0.056377888, z: 0}
     m_Extent: {x: 4.723242, y: 4.0158215, z: 0}
+--- !u!114 &1095063025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095063020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 15
+  requiredFoodPoints: 70
+  isFish: 0
 --- !u!1001 &1100528169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20344,6 +20412,7 @@ GameObject:
   - component: {fileID: 1144248537}
   - component: {fileID: 1144248536}
   - component: {fileID: 1144248539}
+  - component: {fileID: 1144248540}
   m_Layer: 0
   m_Name: Sprite Shape Profile (15)
   m_TagString: Untagged
@@ -20781,6 +20850,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1144248540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144248535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 100
+  isFish: 0
 --- !u!1001 &1144698887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20925,6 +21010,7 @@ GameObject:
   - component: {fileID: 1146778083}
   - component: {fileID: 1146778082}
   - component: {fileID: 1146778085}
+  - component: {fileID: 1146778086}
   m_Layer: 0
   m_Name: Sprite Shape Profile (12)
   m_TagString: Untagged
@@ -22215,6 +22301,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1146778086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146778081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 50
+  requiredFoodPoints: 200
+  isFish: 0
 --- !u!1001 &1147913603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25426,6 +25528,7 @@ GameObject:
   - component: {fileID: 1353611161}
   - component: {fileID: 1353611160}
   - component: {fileID: 1353611163}
+  - component: {fileID: 1353611164}
   m_Layer: 0
   m_Name: Sprite Shape Profile (16)
   m_TagString: Untagged
@@ -25981,6 +26084,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1353611164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353611159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 30
+  requiredFoodPoints: 120
+  isFish: 0
 --- !u!4 &1370893795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 427687231677932916, guid: 602cd06310cde3f4b91d3f6a9eceed18, type: 3}
@@ -27439,9 +27558,10 @@ GameObject:
   - component: {fileID: 1465943656}
   - component: {fileID: 1465943655}
   - component: {fileID: 1465943658}
+  - component: {fileID: 1465943659}
   m_Layer: 0
   m_Name: Sprite Shape Profile (9)
-  m_TagString: Untagged
+  m_TagString: Final
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28334,6 +28454,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1465943659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465943654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 0
+  requiredFoodPoints: 300
+  isFish: 0
 --- !u!1001 &1467933641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32963,6 +33099,7 @@ GameObject:
   - component: {fileID: 1735110742}
   - component: {fileID: 1735110741}
   - component: {fileID: 1735110744}
+  - component: {fileID: 1735110745}
   m_Layer: 0
   m_Name: Sprite Shape Profile (13)
   m_TagString: Untagged
@@ -33326,6 +33463,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1735110745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735110740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 80
+  isFish: 0
 --- !u!1001 &1735796300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34730,6 +34883,7 @@ GameObject:
   - component: {fileID: 1832084102}
   - component: {fileID: 1832084101}
   - component: {fileID: 1832084104}
+  - component: {fileID: 1832084105}
   m_Layer: 0
   m_Name: Sprite Shape Profile (10)
   m_TagString: Untagged
@@ -35115,6 +35269,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1832084105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832084100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 0
+  requiredFoodPoints: 70
+  isFish: 0
 --- !u!1 &1840499426
 GameObject:
   m_ObjectHideFlags: 0
@@ -35493,7 +35663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866149265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.5, y: 2.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37018,6 +37188,7 @@ GameObject:
   - component: {fileID: 1966133441}
   - component: {fileID: 1966133440}
   - component: {fileID: 1966133443}
+  - component: {fileID: 1966133444}
   m_Layer: 0
   m_Name: Sprite Shape Profile (14)
   m_TagString: Untagged
@@ -37466,6 +37637,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1966133444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966133439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 100
+  isFish: 0
 --- !u!1001 &1977501973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38018,6 +38205,7 @@ GameObject:
   - component: {fileID: 2043680835}
   - component: {fileID: 2043680834}
   - component: {fileID: 2043680833}
+  - component: {fileID: 2043680836}
   m_Layer: 0
   m_Name: Sprite Shape Profile (19)
   m_TagString: Untagged
@@ -38356,6 +38544,22 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: -0.69746304, y: -9.975094, z: 0}
     m_Extent: {x: 8.285666, y: 10.842699, z: 0}
+--- !u!114 &2043680836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043680831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417beea5dcd411e428a15d73dbec2b55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAngler: 0
+  foodWorth: 20
+  requiredFoodPoints: 100
+  isFish: 0
 --- !u!1001 &2049220391
 PrefabInstance:
   m_ObjectHideFlags: 0
